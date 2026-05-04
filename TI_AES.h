@@ -113,5 +113,50 @@
 // Bytes written to AESADIN, AESAXDIN or AESAXIN. Reset when AESDINWR is reset. If AESDINCNTx = 0 and AESDINWR = 0, no bytes were written. If AESDINCNTx = 0 and AESDINWR = 1, all bytes were written.
 // Bytes read from AESADOUT. Reset when AESDOUTRD is reset. If AESDOUTCNTx = 0 and AESDOUTRD = 0, no bytes were read. If AESDOUTCNTx = 0 and AESDOUTRD = 1, all bytes were read.
 
+//AES accelerator key register
+#define AES_accelerator_key_register_Base 0x40444000
+#define AES_accelerator_key_register_Offset 0x0000110C
+#define AES_accelerator_key_register (*((volatile uint32_t)(AES_accelerator_key_register_Base+AES_accelerator_key_register_Offset)))
+//KEY0x bit7-bit0
+//KEY1x bit15-bit8
+//KEY2x bit23-bit16
+//KEY3x bit31-bit24
+
+//AES accelerator data in register
+#define AES_accelerator_data_in_register_Base 0x40444000
+#define AES_accelerator_data_in_register_Offset 0x00001110
+#define AES_accelerator_data_in_registe (*((volatile uint32_t)(AES_accelerator_data_in_register_Base+AES_accelerator_data_in_register_Offset)))
+//DIN0x bit7-bit0
+//DIN1x bit15-bit8
+//DIN2x bit23-bit16
+//DIN3x bit31-bit24
+
+//AES accelerator data out register
+#define AES_accelerator_data_out_register_Base 0x40444000
+#define AES_accelerator_data_out_register_Offset 0x00001114
+#define AES_accelerator_data_out_register (*((volatile uint32_t)(AES_accelerator_data_out_register_Base+AES_accelerator_data_out_register_Offset)))
+//DOUT0x bit7-bit0
+//DOUT1x bit15-bit8
+//DOUT2x bit23-bit16
+//DOUT3x bit31-bit24
+
+//AES accelerator xored data in register
+#define AES_accelerator_xored_data_in_register_Base 0x40444000
+#define AES_accelerator_xored_data_in_register_Offset 0x00001118
+#define AES_accelerator_xored_data_in_register (*((volatile uint32_t)(AES_accelerator_xored_data_in_register_Base+AES_accelerator_xored_data_in_register_Offset)))
+//XDIN0x bit7-bit0
+//XDIN1x bit15-bit8
+//XDIN2x bit23-bit16
+//XDIN3x bit31-bit24
+
+//AES accelerator xored data in register
+#define AES_accelerator_xored_data_in_register_Base 0x40444000
+#define AES_accelerator_xored_data_in_register_Offset 0x0000111C
+#define AES_accelerator_xored_data_in_register (*((volatile uint32_t)(AES_accelerator_xored_data_in_register_Base+AES_accelerator_xored_data_in_register_Offset)))
+//XIN0x bit7-bit0
+//XIN1x bit15-bit8
+//XIN2x bit23-bit16
+//XIN3x bit31-bit24
 
 #endif
+//注：普通AES；高级硬件加密AESADV G3507使用普通AES
