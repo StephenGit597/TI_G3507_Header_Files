@@ -1,0 +1,985 @@
+//Designer:Stephen
+//For TI_MSPM0G3507
+#ifndef TI_GPIO_h
+#define TI_GPIO_h
+//字长文件引入
+#include"stdint.h"
+//Hardware Version Description Register
+#define GPIO_Hardware_Version_Description_Register_Base 0x400A0000
+#define GPIO_Hardware_Version_Description_Register_Offset 0x000010FC
+#define GPIO_Hardware_Version_Description_Register (*((volatile uint32_t)(GPIO_Hardware_Version_Description_Register_Base+GPIO_Hardware_Version_Description_Register_Offset)))
+//字段说明
+//bit3-bit0 Minor rev of the IP
+//bit4-bit4 Major rev of the IP
+//bit15-bit12 Feature Set for the module *instance*
+//bit31-bit16 Module identification contains a unique peripheral identification number
+
+//GPIO_Data_Output_for_pins_DIO3_DIO0
+#define GPIO_Data_Output_for_pins_DIO3_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO3_DIO0_Offset 0x00001200
+#define GPIO_Data_Output_for_pins_DIO3_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO3_DIO0_Base+GPIO_Data_Output_for_pins_DIO3_DIO0_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO0
+#define GPIO_Data_Output_DIO0_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO1
+#define GPIO_Data_Output_DIO1_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO2
+#define GPIO_Data_Output_DIO2_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO3
+#define GPIO_Data_Output_DIO3_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO7_DIO4
+#define GPIO_Data_Output_for_pins_DIO7_DIO4_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO7_DIO4_Offset 0x00001204
+#define GPIO_Data_Output_for_pins_DIO7_DIO4 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO7_DIO4_Base+GPIO_Data_Output_for_pins_DIO7_DIO4_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO4
+#define GPIO_Data_Output_DIO4_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO5
+#define GPIO_Data_Output_DIO5_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO6
+#define GPIO_Data_Output_DIO6_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO7
+#define GPIO_Data_Output_DIO7_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO11_DIO8
+#define GPIO_Data_Output_for_pins_DIO11_DI08_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO11_DIO8_Offset 0x00001208
+#define GPIO_Data_Output_for_pins_DIO11_DIO8 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO11_DI08_Base+GPIO_Data_Output_for_pins_DIO11_DIO8_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO8
+#define GPIO_Data_Output_DIO8_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO9
+#define GPIO_Data_Output_DIO9_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO10
+#define GPIO_Data_Output_DIO10_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO11
+#define GPIO_Data_Output_DIO11_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO15_DIO12
+#define GPIO_Data_Output_for_pins_DIO15_DIO12_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO15_DIO12_Offset 0x0000120C
+#define GPIO_Data_Output_for_pins_DIO15_DIO12 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO15_DIO12_Base+GPIO_Data_Output_for_pins_DIO15_DIO12_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO12
+#define GPIO_Data_Output_DIO12_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO13
+#define GPIO_Data_Output_DIO13_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO14
+#define GPIO_Data_Output_DIO14_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO15
+#define GPIO_Data_Output_DIO15_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO19_DIO16
+#define GPIO_Data_Output_for_pins_DIO19_DIO16_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO19_DIO16_Offset 0x00001210
+#define GPIO_Data_Output_for_pins_DIO19_DIO16 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO19_DIO16_Base+GPIO_Data_Output_for_pins_DIO19_DIO16_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO16
+#define GPIO_Data_Output_DIO16_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO17
+#define GPIO_Data_Output_DIO17_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO18
+#define GPIO_Data_Output_DIO18_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO19
+#define GPIO_Data_Output_DIO19_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO23_DIO20
+#define GPIO_Data_Output_for_pins_DIO23_DIO20_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO23_DIO20_Offset 0x00001214
+#define GPIO_Data_Output_for_pins_DIO23_DIO20 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO23_DIO20_Base+GPIO_Data_Output_for_pins_DIO23_DIO20_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO20
+#define GPIO_Data_Output_DIO20_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO21
+#define GPIO_Data_Output_DIO21_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO22
+#define GPIO_Data_Output_DIO22_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO23
+#define GPIO_Data_Output_DIO23_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO27_DIO24
+#define GPIO_Data_Output_for_pins_DIO27_DIO24_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO27_DIO24_Offset 0x00001200
+#define GPIO_Data_Output_for_pins_DIO27_DIO24 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO27_DIO24_Base+GPIO_Data_Output_for_pins_DIO27_DIO24_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO24
+#define GPIO_Data_Output_DIO24_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO25
+#define GPIO_Data_Output_DIO25_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO26
+#define GPIO_Data_Output_DIO26_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO27
+#define GPIO_Data_Output_DIO27_is_set_to_1 0x01000000
+
+//GPIO_Data_Output_for_pins_DIO3_DIO0
+#define GPIO_Data_Output_for_pins_DIO31_DIO28_Base 0x400A0000
+#define GPIO_Data_Output_for_pins_DIO31_DIO28_Offset 0x00001200
+#define GPIO_Data_Output_for_pins_DIO31_DIO28 (*((volatile uint32_t)(GPIO_Data_Output_for_pins_DIO31_DIO28_Base+GPIO_Data_Output_for_pins_DIO31_DIO28_Offset)))
+//控制宏
+//This bit sets the value of the pin configured as DIO0
+#define GPIO_Data_Output_DIO28_is_set_to_1 0x00000001
+//This bit sets the value of the pin configured as DIO1
+#define GPIO_Data_Output_DIO29_is_set_to_1 0x00000100
+//This bit sets the value of the pin configured as DIO2
+#define GPIO_Data_Output_DIO30_is_set_to_1 0x00010000
+//This bit sets the value of the pin configured as DIO3
+#define GPIO_Data_Output_DIO31_is_set_to_1 0x01000000
+
+//Data Output for pins configured as DIO31 to DIO0
+#define GPIO_Data_Output_pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_pins_DIO31_DIO0_Offset 0x00001280
+#define GPIO_Data_Output_pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_pins_DIO31_DIO0_Base+GPIO_Data_Output_pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_General_Data_Output_pins_DIO0_set_to_1 0x00000001
+#define GPIO_General_Data_Output_pins_DIO1_set_to_1 0x00000002
+#define GPIO_General_Data_Output_pins_DIO2_set_to_1 0x00000004
+#define GPIO_General_Data_Output_pins_DIO3_set_to_1 0x00000008
+#define GPIO_General_Data_Output_pins_DIO4_set_to_1 0x00000010
+#define GPIO_General_Data_Output_pins_DIO5_set_to_1 0x00000020
+#define GPIO_General_Data_Output_pins_DIO6_set_to_1 0x00000040
+#define GPIO_General_Data_Output_pins_DIO7_set_to_1 0x00000080
+#define GPIO_General_Data_Output_pins_DIO8_set_to_1 0x00000100
+#define GPIO_General_Data_Output_pins_DIO9_set_to_1 0x00000200
+#define GPIO_General_Data_Output_pins_DIO10_set_to_1 0x00000400
+#define GPIO_General_Data_Output_pins_DIO11_set_to_1 0x00000800
+#define GPIO_General_Data_Output_pins_DIO12_set_to_1 0x00001000
+#define GPIO_General_Data_Output_pins_DIO13_set_to_1 0x00002000
+#define GPIO_General_Data_Output_pins_DIO14_set_to_1 0x00004000
+#define GPIO_General_Data_Output_pins_DIO15_set_to_1 0x00008000
+#define GPIO_General_Data_Output_pins_DIO16_set_to_1 0x00010000
+#define GPIO_General_Data_Output_pins_DIO17_set_to_1 0x00020000
+#define GPIO_General_Data_Output_pins_DIO18_set_to_1 0x00040000
+#define GPIO_General_Data_Output_pins_DIO19_set_to_1 0x00080000
+#define GPIO_General_Data_Output_pins_DIO20_set_to_1 0x00100000
+#define GPIO_General_Data_Output_pins_DIO21_set_to_1 0x00200000
+#define GPIO_General_Data_Output_pins_DIO22_set_to_1 0x00400000
+#define GPIO_General_Data_Output_pins_DIO23_set_to_1 0x00800000
+#define GPIO_General_Data_Output_pins_DIO24_set_to_1 0x01000000
+#define GPIO_General_Data_Output_pins_DIO25_set_to_1 0x02000000
+#define GPIO_General_Data_Output_pins_DIO26_set_to_1 0x04000000
+#define GPIO_General_Data_Output_pins_DIO27_set_to_1 0x08000000
+#define GPIO_General_Data_Output_pins_DIO28_set_to_1 0x10000000
+#define GPIO_General_Data_Output_pins_DIO29_set_to_1 0x20000000
+#define GPIO_General_Data_Output_pins_DIO30_set_to_1 0x40000000
+#define GPIO_General_Data_Output_pins_DIO31_set_to_1 0x80000000
+
+//Data Output Set for pins DIO31 to DIO0
+#define GPIO_Data_Output_Set_pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_Set_pins_DIO31_DIO0_Offset 0x00001290
+#define GPIO_Data_Output_Set_pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_Set_pins_DIO31_DIO0_Base+GPIO_Data_Output_Set_pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_General_Data_Output_pins_DIO0_set_1 0x00000001
+#define GPIO_General_Data_Output_pins_DIO1_set_1 0x00000002
+#define GPIO_General_Data_Output_pins_DIO2_set_1 0x00000004
+#define GPIO_General_Data_Output_pins_DIO3_set_1 0x00000008
+#define GPIO_General_Data_Output_pins_DIO4_set_1 0x00000010
+#define GPIO_General_Data_Output_pins_DIO5_set_1 0x00000020
+#define GPIO_General_Data_Output_pins_DIO6_set_1 0x00000040
+#define GPIO_General_Data_Output_pins_DIO7_set_1 0x00000080
+#define GPIO_General_Data_Output_pins_DIO8_set_1 0x00000100
+#define GPIO_General_Data_Output_pins_DIO9_set_1 0x00000200
+#define GPIO_General_Data_Output_pins_DIO10_set_1 0x00000400
+#define GPIO_General_Data_Output_pins_DIO11_set_1 0x00000800
+#define GPIO_General_Data_Output_pins_DIO12_set_1 0x00001000
+#define GPIO_General_Data_Output_pins_DIO13_set_1 0x00002000
+#define GPIO_General_Data_Output_pins_DIO14_set_1 0x00004000
+#define GPIO_General_Data_Output_pins_DIO15_set_1 0x00008000
+#define GPIO_General_Data_Output_pins_DIO16_set_1 0x00010000
+#define GPIO_General_Data_Output_pins_DIO17_set_1 0x00020000
+#define GPIO_General_Data_Output_pins_DIO18_set_1 0x00040000
+#define GPIO_General_Data_Output_pins_DIO19_set_1 0x00080000
+#define GPIO_General_Data_Output_pins_DIO20_set_1 0x00100000
+#define GPIO_General_Data_Output_pins_DIO21_set_1 0x00200000
+#define GPIO_General_Data_Output_pins_DIO22_set_1 0x00400000
+#define GPIO_General_Data_Output_pins_DIO23_set_1 0x00800000
+#define GPIO_General_Data_Output_pins_DIO24_set_1 0x01000000
+#define GPIO_General_Data_Output_pins_DIO25_set_1 0x02000000
+#define GPIO_General_Data_Output_pins_DIO26_set_1 0x04000000
+#define GPIO_General_Data_Output_pins_DIO27_set_1 0x08000000
+#define GPIO_General_Data_Output_pins_DIO28_set_1 0x10000000
+#define GPIO_General_Data_Output_pins_DIO29_set_1 0x20000000
+#define GPIO_General_Data_Output_pins_DIO30_set_1 0x40000000
+#define GPIO_General_Data_Output_pins_DIO31_set_1 0x80000000
+
+//Data Output Clear for pins DIO31 to DIO0
+#define GPIO_Data_Output_Clear_pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_Clear_pins_DIO31_DIO0_Offset 0x00001290
+#define GPIO_Data_Output_Clear_pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_Clear_pins_DIO31_DIO0_Base+GPIO_Data_Output_Clear_pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_General_Data_Output_pins_DIO0_set_0 0x00000001
+#define GPIO_General_Data_Output_pins_DIO1_set_0 0x00000002
+#define GPIO_General_Data_Output_pins_DIO2_set_0 0x00000004
+#define GPIO_General_Data_Output_pins_DIO3_set_0 0x00000008
+#define GPIO_General_Data_Output_pins_DIO4_set_0 0x00000010
+#define GPIO_General_Data_Output_pins_DIO5_set_0 0x00000020
+#define GPIO_General_Data_Output_pins_DIO6_set_0 0x00000040
+#define GPIO_General_Data_Output_pins_DIO7_set_0 0x00000080
+#define GPIO_General_Data_Output_pins_DIO8_set_0 0x00000100
+#define GPIO_General_Data_Output_pins_DIO9_set_0 0x00000200
+#define GPIO_General_Data_Output_pins_DIO10_set_0 0x00000400
+#define GPIO_General_Data_Output_pins_DIO11_set_0 0x00000800
+#define GPIO_General_Data_Output_pins_DIO12_set_0 0x00001000
+#define GPIO_General_Data_Output_pins_DIO13_set_0 0x00002000
+#define GPIO_General_Data_Output_pins_DIO14_set_0 0x00004000
+#define GPIO_General_Data_Output_pins_DIO15_set_0 0x00008000
+#define GPIO_General_Data_Output_pins_DIO16_set_0 0x00010000
+#define GPIO_General_Data_Output_pins_DIO17_set_0 0x00020000
+#define GPIO_General_Data_Output_pins_DIO18_set_0 0x00040000
+#define GPIO_General_Data_Output_pins_DIO19_set_0 0x00080000
+#define GPIO_General_Data_Output_pins_DIO20_set_0 0x00100000
+#define GPIO_General_Data_Output_pins_DIO21_set_0 0x00200000
+#define GPIO_General_Data_Output_pins_DIO22_set_0 0x00400000
+#define GPIO_General_Data_Output_pins_DIO23_set_0 0x00800000
+#define GPIO_General_Data_Output_pins_DIO24_set_0 0x01000000
+#define GPIO_General_Data_Output_pins_DIO25_set_0 0x02000000
+#define GPIO_General_Data_Output_pins_DIO26_set_0 0x04000000
+#define GPIO_General_Data_Output_pins_DIO27_set_0 0x08000000
+#define GPIO_General_Data_Output_pins_DIO28_set_0 0x10000000
+#define GPIO_General_Data_Output_pins_DIO29_set_0 0x20000000
+#define GPIO_General_Data_Output_pins_DIO30_set_0 0x40000000
+#define GPIO_General_Data_Output_pins_DIO31_set_0 0x80000000
+
+//Data Output Toggle for pins DIO31 to DIO0
+#define GPIO_Data_Output_Toggle_for_Pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_Toggle_for_Pins_DIO31_DIO0_Offset 0x000012B0
+#define GPIO_Data_Output_Toggle_for_Pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_Toggle_for_Pins_DIO31_DIO0_Base+GPIO_Data_Output_Toggle_for_Pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_General_Data_Output_pins_DIO0_Toggle 0x00000001
+#define GPIO_General_Data_Output_pins_DIO1_Toggle 0x00000002
+#define GPIO_General_Data_Output_pins_DIO2_Toggle 0x00000004
+#define GPIO_General_Data_Output_pins_DIO3_Toggle 0x00000008
+#define GPIO_General_Data_Output_pins_DIO4_Toggle 0x00000010
+#define GPIO_General_Data_Output_pins_DIO5_Toggle 0x00000020
+#define GPIO_General_Data_Output_pins_DIO6_Toggle 0x00000040
+#define GPIO_General_Data_Output_pins_DIO7_Toggle 0x00000080
+#define GPIO_General_Data_Output_pins_DIO8_Toggle 0x00000100
+#define GPIO_General_Data_Output_pins_DIO9_Toggle 0x00000200
+#define GPIO_General_Data_Output_pins_DIO10_Toggle 0x00000400
+#define GPIO_General_Data_Output_pins_DIO11_Toggle 0x00000800
+#define GPIO_General_Data_Output_pins_DIO12_Toggle 0x00001000
+#define GPIO_General_Data_Output_pins_DIO13_Toggle 0x00002000
+#define GPIO_General_Data_Output_pins_DIO14_Toggle 0x00004000
+#define GPIO_General_Data_Output_pins_DIO15_Toggle 0x00008000
+#define GPIO_General_Data_Output_pins_DIO16_Toggle 0x00010000
+#define GPIO_General_Data_Output_pins_DIO17_Toggle 0x00020000
+#define GPIO_General_Data_Output_pins_DIO18_Toggle 0x00040000
+#define GPIO_General_Data_Output_pins_DIO19_Toggle 0x00080000
+#define GPIO_General_Data_Output_pins_DIO20_Toggle 0x00100000
+#define GPIO_General_Data_Output_pins_DIO21_Toggle 0x00200000
+#define GPIO_General_Data_Output_pins_DIO22_Toggle 0x00400000
+#define GPIO_General_Data_Output_pins_DIO23_Toggle 0x00800000
+#define GPIO_General_Data_Output_pins_DIO24_Toggle 0x01000000
+#define GPIO_General_Data_Output_pins_DIO25_Toggle 0x02000000
+#define GPIO_General_Data_Output_pins_DIO26_Toggle 0x04000000
+#define GPIO_General_Data_Output_pins_DIO27_Toggle 0x08000000
+#define GPIO_General_Data_Output_pins_DIO28_Toggle 0x10000000
+#define GPIO_General_Data_Output_pins_DIO29_Toggle 0x20000000
+#define GPIO_General_Data_Output_pins_DIO30_Toggle 0x40000000
+#define GPIO_General_Data_Output_pins_DIO31_Toggle 0x80000000
+
+//Data Output Enable for pins DIO31 to DIO0
+#define GPIO_Data_Output_Enable_pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_Enable_pins_DIO31_DIO0_Offset 0x000012C0
+#define GPIO_Data_Output_Enable_pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_Enable_pins_DIO31_DIO0_Base+GPIO_Data_Output_Enable_pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_General_Data_Output_pins_DIO0_Enable 0x00000001
+#define GPIO_General_Data_Output_pins_DIO1_Enable 0x00000002
+#define GPIO_General_Data_Output_pins_DIO2_Enable 0x00000004
+#define GPIO_General_Data_Output_pins_DIO3_Enable 0x00000008
+#define GPIO_General_Data_Output_pins_DIO4_Enable 0x00000010
+#define GPIO_General_Data_Output_pins_DIO5_Enable 0x00000020
+#define GPIO_General_Data_Output_pins_DIO6_Enable 0x00000040
+#define GPIO_General_Data_Output_pins_DIO7_Enable 0x00000080
+#define GPIO_General_Data_Output_pins_DIO8_Enable 0x00000100
+#define GPIO_General_Data_Output_pins_DIO9_Enable 0x00000200
+#define GPIO_General_Data_Output_pins_DIO10_Enable 0x00000400
+#define GPIO_General_Data_Output_pins_DIO11_Enable 0x00000800
+#define GPIO_General_Data_Output_pins_DIO12_Enable 0x00001000
+#define GPIO_General_Data_Output_pins_DIO13_Enable 0x00002000
+#define GPIO_General_Data_Output_pins_DIO14_Enable 0x00003000
+#define GPIO_General_Data_Output_pins_DIO15_Enable 0x00004000
+#define GPIO_General_Data_Output_pins_DIO16_Enable 0x00010000
+#define GPIO_General_Data_Output_pins_DIO17_Enable 0x00020000
+#define GPIO_General_Data_Output_pins_DIO18_Enable 0x00040000
+#define GPIO_General_Data_Output_pins_DIO19_Enable 0x00080000
+#define GPIO_General_Data_Output_pins_DIO20_Enable 0x00100000
+#define GPIO_General_Data_Output_pins_DIO21_Enable 0x00200000
+#define GPIO_General_Data_Output_pins_DIO22_Enable 0x00400000
+#define GPIO_General_Data_Output_pins_DIO23_Enable 0x00800000
+#define GPIO_General_Data_Output_pins_DIO24_Enable 0x01000000
+#define GPIO_General_Data_Output_pins_DIO25_Enable 0x02000000
+#define GPIO_General_Data_Output_pins_DIO26_Enable 0x04000000
+#define GPIO_General_Data_Output_pins_DIO27_Enable 0x08000000
+#define GPIO_General_Data_Output_pins_DIO28_Enable 0x10000000
+#define GPIO_General_Data_Output_pins_DIO29_Enable 0x20000000
+#define GPIO_General_Data_Output_pins_DIO30_Enable 0x40000000
+#define GPIO_General_Data_Output_pins_DIO31_Enable 0x80000000
+
+//Data Output Enable Set for pins DIO31 to DIO0
+#define GPIO_Data_Output_Enable_Set_pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_Enable_Set_pins_DIO31_DIO0_Offset 0x000012D0
+#define GPIO_Data_Output_Enable_Set_pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_Enable_Set_pins_DIO31_DIO0_Base+GPIO_Data_Output_Enable_Set_pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_Data_Output_Enable_Set_pins_0 0x00000001
+#define GPIO_Data_Output_Enable_Set_pins_1 0x00000002
+#define GPIO_Data_Output_Enable_Set_pins_2 0x00000004
+#define GPIO_Data_Output_Enable_Set_pins_3 0x00000008
+#define GPIO_Data_Output_Enable_Set_pins_4 0x00000010
+#define GPIO_Data_Output_Enable_Set_pins_5 0x00000020
+#define GPIO_Data_Output_Enable_Set_pins_6 0x00000040
+#define GPIO_Data_Output_Enable_Set_pins_7 0x00000080
+#define GPIO_Data_Output_Enable_Set_pins_8 0x00000100
+#define GPIO_Data_Output_Enable_Set_pins_9 0x00000200
+#define GPIO_Data_Output_Enable_Set_pins_10 0x00000400
+#define GPIO_Data_Output_Enable_Set_pins_11 0x00000800
+#define GPIO_Data_Output_Enable_Set_pins_12 0x00001000
+#define GPIO_Data_Output_Enable_Set_pins_13 0x00002000
+#define GPIO_Data_Output_Enable_Set_pins_14 0x00004000
+#define GPIO_Data_Output_Enable_Set_pins_15 0x00008000
+#define GPIO_Data_Output_Enable_Set_pins_16 0x00010000
+#define GPIO_Data_Output_Enable_Set_pins_17 0x00020000
+#define GPIO_Data_Output_Enable_Set_pins_18 0x00040000
+#define GPIO_Data_Output_Enable_Set_pins_19 0x00080000
+#define GPIO_Data_Output_Enable_Set_pins_20 0x00100000
+#define GPIO_Data_Output_Enable_Set_pins_21 0x00200000
+#define GPIO_Data_Output_Enable_Set_pins_22 0x00400000
+#define GPIO_Data_Output_Enable_Set_pins_23 0x00800000
+#define GPIO_Data_Output_Enable_Set_pins_24 0x01000000
+#define GPIO_Data_Output_Enable_Set_pins_25 0x02000000
+#define GPIO_Data_Output_Enable_Set_pins_26 0x04000000
+#define GPIO_Data_Output_Enable_Set_pins_27 0x08000000
+#define GPIO_Data_Output_Enable_Set_pins_28 0x10000000
+#define GPIO_Data_Output_Enable_Set_pins_29 0x20000000
+#define GPIO_Data_Output_Enable_Set_pins_30 0x40000000
+#define GPIO_Data_Output_Enable_Set_pins_31 0x80000000
+
+//Data Output Enable Clear for pins DIO31 to DIO0
+#define GPIO_Data_Output_Enable_Clear_pins_DIO31_DIO0_Base 0x400A0000
+#define GPIO_Data_Output_Enable_Clear_pins_DIO31_DIO0_Offset 0x000012E0
+#define GPIO_Data_Output_Enable_Clear_pins_DIO31_DIO0 (*((volatile uint32_t)(GPIO_Data_Output_Enable_Clear_pins_DIO31_DIO0_Base+GPIO_Data_Output_Enable_Clear_pins_DIO31_DIO0_Offset)))
+//控制宏
+#define GPIO_Data_Output_Enable_Clear_pins_0 0x00000001
+#define GPIO_Data_Output_Enable_Clear_pins_1 0x00000002
+#define GPIO_Data_Output_Enable_Clear_pins_2 0x00000004
+#define GPIO_Data_Output_Enable_Clear_pins_3 0x00000008
+#define GPIO_Data_Output_Enable_Clear_pins_4 0x00000010
+#define GPIO_Data_Output_Enable_Clear_pins_5 0x00000020
+#define GPIO_Data_Output_Enable_Clear_pins_6 0x00000040
+#define GPIO_Data_Output_Enable_Clear_pins_7 0x00000080
+#define GPIO_Data_Output_Enable_Clear_pins_8 0x00000100
+#define GPIO_Data_Output_Enable_Clear_pins_9 0x00000200
+#define GPIO_Data_Output_Enable_Clear_pins_10 0x00000400
+#define GPIO_Data_Output_Enable_Clear_pins_11 0x00000800
+#define GPIO_Data_Output_Enable_Clear_pins_12 0x00001000
+#define GPIO_Data_Output_Enable_Clear_pins_13 0x00002000
+#define GPIO_Data_Output_Enable_Clear_pins_14 0x00004000
+#define GPIO_Data_Output_Enable_Clear_pins_15 0x00008000
+#define GPIO_Data_Output_Enable_Clear_pins_16 0x00010000
+#define GPIO_Data_Output_Enable_Clear_pins_17 0x00020000
+#define GPIO_Data_Output_Enable_Clear_pins_18 0x00040000
+#define GPIO_Data_Output_Enable_Clear_pins_19 0x00080000
+#define GPIO_Data_Output_Enable_Clear_pins_20 0x00100000
+#define GPIO_Data_Output_Enable_Clear_pins_21 0000200000
+#define GPIO_Data_Output_Enable_Clear_pins_22 0x00400000
+#define GPIO_Data_Output_Enable_Clear_pins_23 0x00800000
+#define GPIO_Data_Output_Enable_Clear_pins_24 0x01000000
+#define GPIO_Data_Output_Enable_Clear_pins_25 0x02000000
+#define GPIO_Data_Output_Enable_Clear_pins_26 0x04000000
+#define GPIO_Data_Output_Enable_Clear_pins_27 0x08000000
+#define GPIO_Data_Output_Enable_Clear_pins_28 0x10000000
+#define GPIO_Data_Output_Enable_Clear_pins_29 0x20000000
+#define GPIO_Data_Output_Enable_Clear_pins_30 0x40000000
+#define GPIO_Data_Output_Enable_Clear_pins_31 0x80000000
+
+//Data Input from pins configured as DIO3 to DIO0
+#define GPIO_Data_Input_Pins_DIO3_DIO0_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO3_DIO0_Offset 0x00001300
+#define GPIO_Data_Input_Pins_DIO3_DIO0 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO3_DIO0_Base+GPIO_Data_Input_Pins_DIO3_DIO0_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin0_is_1 0x00000001
+#define GPIO_Data_Input_Pin1_is_1 0x00000100
+#define GPIO_Data_Input_Pin2_is_1 0x00010000
+#define GPIO_Data_Input_Pin3_is_1 0x01000000
+
+//Data Input from pins configured as DIO7 to DIO4
+#define GPIO_Data_Input_Pins_DIO7_DIO4_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO7_DIO4_Offset 0x00001304
+#define GPIO_Data_Input_Pins_DIO7_DIO4 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO7_DIO4_Base+GPIO_Data_Input_Pins_DIO7_DIO4_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin4_is_1 0x00000001
+#define GPIO_Data_Input_Pin5_is_1 0x00000100
+#define GPIO_Data_Input_Pin6_is_1 0x00010000
+#define GPIO_Data_Input_Pin7_is_1 0x01000000
+
+//Data Input from pins configured as DIO11 to DIO8
+#define GPIO_Data_Input_Pins_DIO11_DIO8_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO11_DIO8_Offset 0x00001308
+#define GPIO_Data_Input_Pins_DIO11_DIO8 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO11_DIO8_Base+GPIO_Data_Input_Pins_DIO11_DIO8_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin8_is_1 0x00000001
+#define GPIO_Data_Input_Pin9_is_1 0x00000100
+#define GPIO_Data_Input_Pin10_is_1 0x00010000
+#define GPIO_Data_Input_Pin11_is_1 0x01000000
+
+//Data Input from pins configured as DIO15 to DIO12
+#define GPIO_Data_Input_Pins_DIO15_DIO12_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO15_DIO12_Offset 0x0000130C
+#define GPIO_Data_Input_Pins_DIO15_DIO12 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO15_DIO12_Base+GPIO_Data_Input_Pins_DIO15_DIO12_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin12_is_1 0x00000001
+#define GPIO_Data_Input_Pin13_is_1 0x00000100
+#define GPIO_Data_Input_Pin14_is_1 0x00010000
+#define GPIO_Data_Input_Pin15_is_1 0x01000000
+
+//Data Input from pins configured as DIO19 to DIO16
+#define GPIO_Data_Input_Pins_DIO19_DIO16_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO19_DIO16_Offset 0x00001310
+#define GPIO_Data_Input_Pins_DIO19_DIO16 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO19_DIO16_Base+GPIO_Data_Input_Pins_DIO19_DIO16_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin16_is_1 0x00000001
+#define GPIO_Data_Input_Pin17_is_1 0x00000100
+#define GPIO_Data_Input_Pin18_is_1 0x00010000
+#define GPIO_Data_Input_Pin19_is_1 0x01000000
+
+//Data Input from pins configured as DIO23 to DIO20
+#define GPIO_Data_Input_Pins_DIO23_DIO20_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO23_DIO20_Offset 0x00001314
+#define GPIO_Data_Input_Pins_DIO23_DIO20 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO23_DIO20_Base+GPIO_Data_Input_Pins_DIO23_DIO20_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin20_is_1 0x00000001
+#define GPIO_Data_Input_Pin21_is_1 0x00000100
+#define GPIO_Data_Input_Pin22_is_1 0x00010000
+#define GPIO_Data_Input_Pin23_is_1 0x01000000
+
+//Data Input from pins configured as DIO19 to DIO16
+#define GPIO_Data_Input_Pins_DIO27_DIO24_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO27_DIO24_Offset 0x00001318
+#define GPIO_Data_Input_Pins_DIO27_DIO24 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO27_DIO24_Base+GPIO_Data_Input_Pins_DIO27_DIO24_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin24_is_1 0x00000001
+#define GPIO_Data_Input_Pin25_is_1 0x00000100
+#define GPIO_Data_Input_Pin26_is_1 0x00010000
+#define GPIO_Data_Input_Pin27_is_1 0x01000000
+
+//Data Input from pins configured as DIO19 to DIO16
+#define GPIO_Data_Input_Pins_DIO31_DIO28_Base 0x400A0000
+#define GPIO_Data_Input_Pins_DIO31_DIO28_Offset 0x0000131C
+#define GPIO_Data_Input_Pins_DIO31_DIO28 (*((volatile uint32_t)(GPIO_Data_Input_Pins_DIO31_DIO28_Base+GPIO_Data_Input_Pins_DIO31_DIO28_Offset)))
+//标志宏
+#define GPIO_Data_Input_Pin28_is_1 0x00000001
+#define GPIO_Data_Input_Pin29_is_1 0x00000100
+#define GPIO_Data_Input_Pin30_is_1 0x00010000
+#define GPIO_Data_Input_Pin31_is_1 0x01000000
+
+// Data Input for pins configured as DIO31 to DIO0
+#define GPIO_General_Data_Input_Base 0x400A0000
+#define GPIO_General_Data_Input_Offset 0x00001380
+#define GPIO_General_Data_Input (*((volatile uint32_t)(GPIO_General_Data_Input_Base+GPIO_General_Data_Input_Offset)))
+//状态宏
+#define GPIO_General_Data_Input_Pin0_is_1 0x00000001
+#define GPIO_General_Data_Input_Pin1_is_1 0x00000002
+#define GPIO_General_Data_Input_Pin2_is_1 0x00000004
+#define GPIO_General_Data_Input_Pin3_is_1 0x00000008
+#define GPIO_General_Data_Input_Pin4_is_1 0x00000010
+#define GPIO_General_Data_Input_Pin5_is_1 0x00000020
+#define GPIO_General_Data_Input_Pin6_is_1 0x00000040
+#define GPIO_General_Data_Input_Pin7_is_1 0x00000080
+#define GPIO_General_Data_Input_Pin8_is_1 0x00000100
+#define GPIO_General_Data_Input_Pin9_is_1 0x00000200
+#define GPIO_General_Data_Input_Pin10_is_1 0x00000400
+#define GPIO_General_Data_Input_Pin11_is_1 0x00000800
+#define GPIO_General_Data_Input_Pin12_is_1 0x00001000
+#define GPIO_General_Data_Input_Pin13_is_1 0x00002000
+#define GPIO_General_Data_Input_Pin14_is_1 0x00004000
+#define GPIO_General_Data_Input_Pin15_is_1 0x00008000
+#define GPIO_General_Data_Input_Pin16_is_1 0x00010000
+#define GPIO_General_Data_Input_Pin17_is_1 0x00020000
+#define GPIO_General_Data_Input_Pin18_is_1 0x00040000
+#define GPIO_General_Data_Input_Pin19_is_1 0x00080000
+#define GPIO_General_Data_Input_Pin20_is_1 0x00100000
+#define GPIO_General_Data_Input_Pin21_is_1 0x00200000
+#define GPIO_General_Data_Input_Pin22_is_1 0x00400000
+#define GPIO_General_Data_Input_Pin23_is_1 0x00800000
+#define GPIO_General_Data_Input_Pin24_is_1 0x01000000
+#define GPIO_General_Data_Input_Pin25_is_1 0x02000000
+#define GPIO_General_Data_Input_Pin26_is_1 0x04000000
+#define GPIO_General_Data_Input_Pin27_is_1 0x08000000
+#define GPIO_General_Data_Input_Pin28_is_1 0x10000000
+#define GPIO_General_Data_Input_Pin29_is_1 0x20000000
+#define GPIO_General_Data_Input_Pin30_is_1 0x40000000
+#define GPIO_General_Data_Input_Pin31_is_1 0x80000000
+
+//Polarity Configuration for pins DIO15 to DIO0
+#define GPIO_Polarity_Configuration_DIO15_DIO0_Base 0x400A0000
+#define GPIO_Polarity_Configuration_DIO15_DIO0_Offset 0x00001390
+#define GPIO_Polarity_Configuration_DIO15_DIO0 (*((volatile uint32_t)(GPIO_Polarity_Configuration_DIO15_DIO0_Base+GPIO_Polarity_Configuration_DIO15_DIO0_Offset)))
+//控制宏
+//PIN0
+#define GPIO_Pin0_Edge_detection_disabled 0x00000000
+#define GPIO_Pin0_Detects_rising_edge_of_input_event 0x00000001
+#define GPIO_Pin0_Detects_falling_edge_of_input_event 0x00000002
+#define GPIO_Pin0_Detects_both_rising_and_falling_edge 0x00000003
+//PIN1
+#define GPIO_Pin1_Edge_detection_disabled 0x00000000
+#define GPIO_Pin1_Detects_rising_edge_of_input_event 0x00000004
+#define GPIO_Pin1_Detects_falling_edge_of_input_event 0x00000008
+#define GPIO_Pin1_Detects_both_rising_and_falling_edge 0x0000000C
+//PIN2
+#define GPIO_Pin2_Edge_detection_disabled 0x00000000
+#define GPIO_Pin2_Detects_rising_edge_of_input_event 0x00000010
+#define GPIO_Pin2_Detects_falling_edge_of_input_event 0x00000020
+#define GPIO_Pin2_Detects_both_rising_and_falling_edge 0x00000030
+//PIN3
+#define GPIO_Pin3_Edge_detection_disabled 0x00000000
+#define GPIO_Pin3_Detects_rising_edge_of_input_event 0x00000040
+#define GPIO_Pin3_Detects_falling_edge_of_input_event 0x00000080
+#define GPIO_Pin3_Detects_both_rising_and_falling_edge 0x000000C0
+//PIN4
+#define GPIO_Pin4_Edge_detection_disabled 0x00000000
+#define GPIO_Pin4_Detects_rising_edge_of_input_event 0x00000100
+#define GPIO_Pin4_Detects_falling_edge_of_input_event 0x00000200
+#define GPIO_Pin4_Detects_both_rising_and_falling_edge 0x00000300
+//PIN5
+#define GPIO_Pin5_Edge_detection_disabled 0x00000000
+#define GPIO_Pin5_Detects_rising_edge_of_input_event 0x00000400
+#define GPIO_Pin5_Detects_falling_edge_of_input_event 0x00000800
+#define GPIO_Pin5_Detects_both_rising_and_falling_edge 0x00000C00
+//PIN6
+#define GPIO_Pin6_Edge_detection_disabled 0x00000000
+#define GPIO_Pin6_Detects_rising_edge_of_input_event 0x00001000
+#define GPIO_Pin6_Detects_falling_edge_of_input_event 0x00002000
+#define GPIO_Pin6_Detects_both_rising_and_falling_edge 0x00003000
+//PIN7
+#define GPIO_Pin7_Edge_detection_disabled 0x00000000
+#define GPIO_Pin7_Detects_rising_edge_of_input_event 0x00004000
+#define GPIO_Pin7_Detects_falling_edge_of_input_event 0x00008000
+#define GPIO_Pin7_Detects_both_rising_and_falling_edge 0x0000C000
+//PIN8
+#define GPIO_Pin8_Edge_detection_disabled 0x00000000
+#define GPIO_Pin8_Detects_rising_edge_of_input_event 0x00010000
+#define GPIO_Pin8_Detects_falling_edge_of_input_event 0x00020000
+#define GPIO_Pin8_Detects_both_rising_and_falling_edge 0x00030000
+//PIN9
+#define GPIO_Pin9_Edge_detection_disabled 0x00000000
+#define GPIO_Pin9_Detects_rising_edge_of_input_event 0x00040000
+#define GPIO_Pin9_Detects_falling_edge_of_input_event 0x00080000
+#define GPIO_Pin9_Detects_both_rising_and_falling_edge 0x000C0000
+//PIN10
+#define GPIO_Pin10_Edge_detection_disabled 0x00000000
+#define GPIO_Pin10_Detects_rising_edge_of_input_event 0x00100000
+#define GPIO_Pin10_Detects_falling_edge_of_input_event 0x00200000
+#define GPIO_Pin10_Detects_both_rising_and_falling_edge 0x00300000
+//PIN11
+#define GPIO_Pin11_Edge_detection_disabled 0x00000000
+#define GPIO_Pin11_Detects_rising_edge_of_input_event 0x00400000
+#define GPIO_Pin11_Detects_falling_edge_of_input_event 0x00800000
+#define GPIO_Pin11_Detects_both_rising_and_falling_edge 0x00C00000
+//PIN12
+#define GPIO_Pin12_Edge_detection_disabled 0x00000000
+#define GPIO_Pin12_Detects_rising_edge_of_input_event 0x01000000
+#define GPIO_Pin12_Detects_falling_edge_of_input_event 0x02000000
+#define GPIO_Pin12_Detects_both_rising_and_falling_edge 0x03000000
+//PIN13
+#define GPIO_Pin13_Edge_detection_disabled 0x00000000
+#define GPIO_Pin13_Detects_rising_edge_of_input_event 0x04000000
+#define GPIO_Pin13_Detects_falling_edge_of_input_event 0x08000000
+#define GPIO_Pin13_Detects_both_rising_and_falling_edge 0x0C000000
+//PIN14
+#define GPIO_Pin14_Edge_detection_disabled 0x00000000
+#define GPIO_Pin14_Detects_rising_edge_of_input_event 0x10000000
+#define GPIO_Pin14_Detects_falling_edge_of_input_event 0x20000000
+#define GPIO_Pin14_Detects_both_rising_and_falling_edge 0x30000000
+//PIN15
+#define GPIO_Pin15_Edge_detection_disabled 0x00000000
+#define GPIO_Pin15_Detects_rising_edge_of_input_event 0x40000000
+#define GPIO_Pin15_Detects_falling_edge_of_input_event 0x80000000
+#define GPIO_Pin15_Detects_both_rising_and_falling_edge 0xC0000000
+
+//Polarity Configuration for pins DIO31 to DIO16
+#define GPIO_Polarity_Configuration_DIO31_DIO16_Base 0x400A0000
+#define GPIO_Polarity_Configuration_DIO31_DIO16_Offset 0x000013A0
+#define GPIO_Polarity_Configuration_DIO31_DIO16 (*((volatile uint32_t)(GPIO_Polarity_Configuration_DIO31_DIO16_Base+GPIO_Polarity_Configuration_DIO31_DIO16_Offset)))
+//控制宏
+//PIN16
+#define GPIO_Pin16_Edge_detection_disabled 0x00000000
+#define GPIO_Pin16_Detects_rising_edge_of_input_event 0x00000001
+#define GPIO_Pin16_Detects_falling_edge_of_input_event 0x00000002
+#define GPIO_Pin16_Detects_both_rising_and_falling_edge 0x00000003
+//PIN17
+#define GPIO_Pin17_Edge_detection_disabled 0x00000000
+#define GPIO_Pin17_Detects_rising_edge_of_input_event 0x00000004
+#define GPIO_Pin17_Detects_falling_edge_of_input_event 0x00000008
+#define GPIO_Pin17_Detects_both_rising_and_falling_edge 0x0000000C
+//PIN18
+#define GPIO_Pin18_Edge_detection_disabled 0x00000000
+#define GPIO_Pin18_Detects_rising_edge_of_input_event 0x00000010
+#define GPIO_Pin18_Detects_falling_edge_of_input_event 0x00000020
+#define GPIO_Pin18_Detects_both_rising_and_falling_edge 0x00000030
+//PIN19
+#define GPIO_Pin19_Edge_detection_disabled 0x00000000
+#define GPIO_Pin19_Detects_rising_edge_of_input_event 0x00000040
+#define GPIO_Pin19_Detects_falling_edge_of_input_event 0x00000080
+#define GPIO_Pin19_Detects_both_rising_and_falling_edge 0x000000C0
+//PIN20
+#define GPIO_Pin20_Edge_detection_disabled 0x00000000
+#define GPIO_Pin20_Detects_rising_edge_of_input_event 0x00000100
+#define GPIO_Pin20_Detects_falling_edge_of_input_event 0x00000200
+#define GPIO_Pin20_Detects_both_rising_and_falling_edge 0x00000300
+//PIN21
+#define GPIO_Pin21_Edge_detection_disabled 0x00000000
+#define GPIO_Pin21_Detects_rising_edge_of_input_event 0x00000400
+#define GPIO_Pin21_Detects_falling_edge_of_input_event 0x00000800
+#define GPIO_Pin21_Detects_both_rising_and_falling_edge 0x00000C00
+//PIN22
+#define GPIO_Pin22_Edge_detection_disabled 0x00000000
+#define GPIO_Pin22_Detects_rising_edge_of_input_event 0x00001000
+#define GPIO_Pin22_Detects_falling_edge_of_input_event 0x00002000
+#define GPIO_Pin22_Detects_both_rising_and_falling_edge 0x00003000
+//PIN23
+#define GPIO_Pin23_Edge_detection_disabled 0x00000000
+#define GPIO_Pin23_Detects_rising_edge_of_input_event 0x00004000
+#define GPIO_Pin23_Detects_falling_edge_of_input_event 0x00008000
+#define GPIO_Pin23_Detects_both_rising_and_falling_edge 0x0000C000
+//PIN24
+#define GPIO_Pin24_Edge_detection_disabled 0x00000000
+#define GPIO_Pin24_Detects_rising_edge_of_input_event 0x00010000
+#define GPIO_Pin24_Detects_falling_edge_of_input_event 0x00020000
+#define GPIO_Pin24_Detects_both_rising_and_falling_edge 0x00030000
+//PIN25
+#define GPIO_Pin25_Edge_detection_disabled 0x00000000
+#define GPIO_Pin25_Detects_rising_edge_of_input_event 0x00040000
+#define GPIO_Pin25_Detects_falling_edge_of_input_event 0x00080000
+#define GPIO_Pin25_Detects_both_rising_and_falling_edge 0x000C0000
+//PIN26
+#define GPIO_Pin26_Edge_detection_disabled 0x00000000
+#define GPIO_Pin26_Detects_rising_edge_of_input_event 0x00100000
+#define GPIO_Pin26_Detects_falling_edge_of_input_event 0x00200000
+#define GPIO_Pin26_Detects_both_rising_and_falling_edge 0x00300000
+//PIN27
+#define GPIO_Pin27_Edge_detection_disabled 0x00000000
+#define GPIO_Pin27_Detects_rising_edge_of_input_event 0x00400000
+#define GPIO_Pin27_Detects_falling_edge_of_input_event 0x00800000
+#define GPIO_Pin27_Detects_both_rising_and_falling_edge 0x00C00000
+//PIN28
+#define GPIO_Pin28_Edge_detection_disabled 0x00000000
+#define GPIO_Pin28_Detects_rising_edge_of_input_event 0x01000000
+#define GPIO_Pin28_Detects_falling_edge_of_input_event 0x02000000
+#define GPIO_Pin28_Detects_both_rising_and_falling_edge 0x03000000
+//PIN29
+#define GPIO_Pin29_Edge_detection_disabled 0x00000000
+#define GPIO_Pin29_Detects_rising_edge_of_input_event 0x04000000
+#define GPIO_Pin29_Detects_falling_edge_of_input_event 0x08000000
+#define GPIO_Pin29_Detects_both_rising_and_falling_edge 0x0C000000
+//PIN30
+#define GPIO_Pin30_Edge_detection_disabled 0x00000000
+#define GPIO_Pin30_Detects_rising_edge_of_input_event 0x10000000
+#define GPIO_Pin30_Detects_falling_edge_of_input_event 0x20000000
+#define GPIO_Pin30_Detects_both_rising_and_falling_edge 0x30000000
+//PI31
+#define GPIO_Pin31_Edge_detection_disabled 0x00000000
+#define GPIO_Pin31_Detects_rising_edge_of_input_event 0x40000000
+#define GPIO_Pin31_Detects_falling_edge_of_input_event 0x80000000
+#define GPIO_Pin31_Detects_both_rising_and_falling_edge 0xC0000000
+
+//GPIO Control Register
+#define GPIO_General_Wakeup_Control_Register_Base 0x400A0000
+#define GPIO_General_Wakeup_Control_Register_Offset 0x00001400
+#define GPIO_General_Wakeup_Control_Register (*((volatile uint32_t)(GPIO_General_Wakeup_Control_Register_Base+GPIO_General_Wakeup_Control_Register_Offset)))
+//控制宏
+#define GPIO_global_control_of_fastwake_Enable 0x00000001
+
+//Fast Wake Enable Register
+#define GPIO_Fast_Wake_Enable_Register_Base 0x400A0000
+#define GPIO_Fast_Wake_Enable_Register_Offset 0x00001404
+#define GPIO_Fast_Wake_Enable_Register (*((volatile uint32_t)(GPIO_Fast_Wake_Enable_Register_Base+GPIO_Fast_Wake_Enable_Register_Offset)))
+//控制宏
+#define GPIO_Din0_Fastwake_Feature_Enable 0x00000001
+#define GPIO_Din1_Fastwake_Feature_Enable 0x00000002
+#define GPIO_Din2_Fastwake_Feature_Enable 0x00000004
+#define GPIO_Din3_Fastwake_Feature_Enable 0x00000008
+#define GPIO_Din4_Fastwake_Feature_Enable 0x00000010
+#define GPIO_Din5_Fastwake_Feature_Enable 0x00000020
+#define GPIO_Din6_Fastwake_Feature_Enable 0x00000040
+#define GPIO_Din7_Fastwake_Feature_Enable 0x00000080
+#define GPIO_Din8_Fastwake_Feature_Enable 0x00000100
+#define GPIO_Din9_Fastwake_Feature_Enable 0x00000200
+#define GPIO_Din10_Fastwake_Feature_Enable 0x00000400
+#define GPIO_Din11_Fastwake_Feature_Enable 0x00000800
+#define GPIO_Din12_Fastwake_Feature_Enable 0x00001000
+#define GPIO_Din13_Fastwake_Feature_Enable 0x00002000
+#define GPIO_Din14_Fastwake_Feature_Enable 0x00004000
+#define GPIO_Din15_Fastwake_Feature_Enable 0x00008000
+#define GPIO_Din16_Fastwake_Feature_Enable 0x00010000
+#define GPIO_Din17_Fastwake_Feature_Enable 0x00020000
+#define GPIO_Din18_Fastwake_Feature_Enable 0x00040000
+#define GPIO_Din19_Fastwake_Feature_Enable 0x00080000
+#define GPIO_Din20_Fastwake_Feature_Enable 0x00100000
+#define GPIO_Din21_Fastwake_Feature_Enable 0x00200000
+#define GPIO_Din22_Fastwake_Feature_Enable 0x00400000
+#define GPIO_Din23_Fastwake_Feature_Enable 0x00800000
+#define GPIO_Din24_Fastwake_Feature_Enable 0x01000000
+#define GPIO_Din25_Fastwake_Feature_Enable 0x02000000
+#define GPIO_Din26_Fastwake_Feature_Enable 0x04000000
+#define GPIO_Din27_Fastwake_Feature_Enable 0x08000000
+#define GPIO_Din28_Fastwake_Feature_Enable 0x10000000
+#define GPIO_Din29_Fastwake_Feature_Enable 0x20000000
+#define GPIO_Din30_Fastwake_Feature_Enable 0x40000000
+#define GPIO_Din31_Fastwake_Feature_Enable 0x80000000
+
+//Subscriber 0 Configuration Register
+#define GPIO_Subscriber_0_Configuration_Register_Base 0x400A0000
+#define GPIO_Subscriber_0_Configuration_Register_Offset 0x00001500
+#define GPIO_Subscriber_0_Configuration_Register (*((volatile uint32_t)(GPIO_Subscriber_0_Configuration_Register_Base+GPIO_Subscriber_0_Configuration_Register_Offset)))
+//控制宏
+//enable_subscriber_0
+#define GPIO_enable_subscriber_0_event 0x00000001
+//output_policy
+#define GPIO_output_policy_Selected_DIO_pins_are_set 0x00000000
+#define GPIO_output_policy_Selected_DIO_pins_are_cleared 0x00000100
+#define GPIO_output_policy_Selected_DIO_pins_are_toggled 0x00000200
+// Indicates the specific bit among lower 16 bits that is targeted by the subscriber action
+#define GPIO_specific_bit_targeted_is_bit0 0x00000000
+#define GPIO_specific_bit_targeted_is_bit1 0x00100000
+#define GPIO_specific_bit_targeted_is_bit2 0x00200000
+#define GPIO_specific_bit_targeted_is_bit3 0x00300000
+#define GPIO_specific_bit_targeted_is_bit4 0x00400000
+#define GPIO_specific_bit_targeted_is_bit5 0x00500000
+#define GPIO_specific_bit_targeted_is_bit6 0x00600000
+#define GPIO_specific_bit_targeted_is_bit7 0x00700000
+#define GPIO_specific_bit_targeted_is_bit8 0x00800000
+#define GPIO_specific_bit_targeted_is_bit9 0x00900000
+#define GPIO_specific_bit_targeted_is_bit10 0x00A00000
+#define GPIO_specific_bit_targeted_is_bit11 0x00B00000
+#define GPIO_specific_bit_targeted_is_bit12 0x00C00000
+#define GPIO_specific_bit_targeted_is_bit13 0x00D00000
+#define GPIO_specific_bit_targeted_is_bit14 0x00E00000
+#define GPIO_specific_bit_targeted_is_bit15 0x00F00000
+
+//Filter Enable for DIO15 to DIO0
+#define GPIO_Filter_Enable_for_DIO15_to_DIO0_Base 0x400A0000
+#define GPIO_Filter_Enable_for_DIO15_to_DIO0_Offset 0x00001508
+#define GPIO_Filter_Enable_for_DIO15_to_DIO0 (*((volatile uint32_t)(GPIO_Filter_Enable_for_DIO15_to_DIO0_Base+GPIO_Filter_Enable_for_DIO15_to_DIO0_Offset)))
+//控制宏
+//Programmable counter length of digital glitch filter for DINx
+//DIN0
+#define GPIO_DIN0_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN0_1_ULPCLK_minimum_sample 0x00000001
+#define GPIO_DIN0_3_ULPCLK_minimum_sample 0x00000002
+#define GPIO_DIN0_8_ULPCLK_minimum_sample 0x00000003
+//DIN1
+#define GPIO_DIN1_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN1_1_ULPCLK_minimum_sample 0x00000004
+#define GPIO_DIN1_3_ULPCLK_minimum_sample 0x00000008
+#define GPIO_DIN1_8_ULPCLK_minimum_sample 0x0000000C
+//DIN2
+#define GPIO_DIN2_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN2_1_ULPCLK_minimum_sample 0x00000010
+#define GPIO_DIN2_3_ULPCLK_minimum_sample 0x00000020
+#define GPIO_DIN2_8_ULPCLK_minimum_sample 0x00000030
+//DIN3
+#define GPIO_DIN3_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN3_1_ULPCLK_minimum_sample 0x00000040
+#define GPIO_DIN3_3_ULPCLK_minimum_sample 0x00000080
+#define GPIO_DIN3_8_ULPCLK_minimum_sample 0x000000C0
+//DIN4
+#define GPIO_DIN4_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN4_1_ULPCLK_minimum_sample 0x00000100
+#define GPIO_DIN4_3_ULPCLK_minimum_sample 0x00000200
+#define GPIO_DIN4_8_ULPCLK_minimum_sample 0x00000300
+//DIN5
+#define GPIO_DIN5_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN5_1_ULPCLK_minimum_sample 0x00000400
+#define GPIO_DIN5_3_ULPCLK_minimum_sample 0x00000800
+#define GPIO_DIN5_8_ULPCLK_minimum_sample 0x00000C00
+//DIN6
+#define GPIO_DIN6_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN6_1_ULPCLK_minimum_sample 0x00001000
+#define GPIO_DIN6_3_ULPCLK_minimum_sample 0x00002000
+#define GPIO_DIN6_8_ULPCLK_minimum_sample 0x00003000
+//DIN7
+#define GPIO_DIN7_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN7_1_ULPCLK_minimum_sample 0x00004000
+#define GPIO_DIN7_3_ULPCLK_minimum_sample 0x00008000
+#define GPIO_DIN7_8_ULPCLK_minimum_sample 0x0000C000
+//DIN8
+#define GPIO_DIN8_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN8_1_ULPCLK_minimum_sample 0x00010000
+#define GPIO_DIN8_3_ULPCLK_minimum_sample 0x00020000
+#define GPIO_DIN8_8_ULPCLK_minimum_sample 0x00030000
+//DIN9
+#define GPIO_DIN9_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN9_1_ULPCLK_minimum_sample 0x00040000
+#define GPIO_DIN9_3_ULPCLK_minimum_sample 0x00080000
+#define GPIO_DIN9_8_ULPCLK_minimum_sample 0x000C0000
+//DIN10
+#define GPIO_DIN10_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN10_1_ULPCLK_minimum_sample 0x00100000
+#define GPIO_DIN10_3_ULPCLK_minimum_sample 0x00200000
+#define GPIO_DIN10_8_ULPCLK_minimum_sample 0x00300000
+//DIN11
+#define GPIO_DIN11_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN11_1_ULPCLK_minimum_sample 0x00400000
+#define GPIO_DIN11_3_ULPCLK_minimum_sample 0x00800000
+#define GPIO_DIN11_8_ULPCLK_minimum_sample 0x00C00000
+//DIN12
+#define GPIO_DIN12_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN12_1_ULPCLK_minimum_sample 0x01000000
+#define GPIO_DIN12_3_ULPCLK_minimum_sample 0x02000000
+#define GPIO_DIN12_8_ULPCLK_minimum_sample 0x03000000
+//DIN13
+#define GPIO_DIN13_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN13_1_ULPCLK_minimum_sample 0x04000000
+#define GPIO_DIN13_3_ULPCLK_minimum_sample 0x08000000
+#define GPIO_DIN13_8_ULPCLK_minimum_sample 0x0C000000
+//DIN14
+#define GPIO_DIN14_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN14_1_ULPCLK_minimum_sample 0x10000000
+#define GPIO_DIN14_3_ULPCLK_minimum_sample 0x20000000
+#define GPIO_DIN14_8_ULPCLK_minimum_sample 0x30000000
+//DIN15
+#define GPIO_DIN15_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN15_1_ULPCLK_minimum_sample 0x40000000
+#define GPIO_DIN15_3_ULPCLK_minimum_sample 0x80000000
+#define GPIO_DIN15_8_ULPCLK_minimum_sample 0xC0000000
+
+//Filter Enable for DIO31 to DIO16
+#define GPIO_Filter_Enable_for_DIO31_to_DIO16_Base 0x400A0000
+#define GPIO_Filter_Enable_for_DIO31_to_DIO16_Offset 0x0000150C
+#define GPIO_Filter_Enable_for_DIO31_to_DIO16 (*((volatile uint32_t)(GPIO_Filter_Enable_for_DIO31_to_DIO16_Base+GPIO_Filter_Enable_for_DIO31_to_DIO16_Offset)))
+//控制宏
+//Programmable counter length of digital glitch filter for DINx
+//DIN16
+#define GPIO_DIN16_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN16_1_ULPCLK_minimum_sample 0x00000001
+#define GPIO_DIN16_3_ULPCLK_minimum_sample 0x00000002
+#define GPIO_DIN16_8_ULPCLK_minimum_sample 0x00000003
+//DIN17
+#define GPIO_DIN17_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN17_1_ULPCLK_minimum_sample 0x00000004
+#define GPIO_DIN17_3_ULPCLK_minimum_sample 0x00000008
+#define GPIO_DIN17_8_ULPCLK_minimum_sample 0x0000000C
+//DIN18
+#define GPIO_DIN18_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN18_1_ULPCLK_minimum_sample 0x00000010
+#define GPIO_DIN18_3_ULPCLK_minimum_sample 0x00000020
+#define GPIO_DIN18_8_ULPCLK_minimum_sample 0x00000030
+//DIN19
+#define GPIO_DIN19_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN19_1_ULPCLK_minimum_sample 0x00000040
+#define GPIO_DIN19_3_ULPCLK_minimum_sample 0x00000080
+#define GPIO_DIN19_8_ULPCLK_minimum_sample 0x000000C0
+//DIN20
+#define GPIO_DIN20_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN20_1_ULPCLK_minimum_sample 0x00000100
+#define GPIO_DIN20_3_ULPCLK_minimum_sample 0x00000200
+#define GPIO_DIN20_8_ULPCLK_minimum_sample 0x00000300
+//DIN21
+#define GPIO_DIN21_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN21_1_ULPCLK_minimum_sample 0x00000400
+#define GPIO_DIN21_3_ULPCLK_minimum_sample 0x00000800
+#define GPIO_DIN21_8_ULPCLK_minimum_sample 0x00000C00
+//DIN22
+#define GPIO_DIN22_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN22_1_ULPCLK_minimum_sample 0x00001000
+#define GPIO_DIN22_3_ULPCLK_minimum_sample 0x00002000
+#define GPIO_DIN22_8_ULPCLK_minimum_sample 0x00003000
+//DIN23
+#define GPIO_DIN23_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN23_1_ULPCLK_minimum_sample 0x00004000
+#define GPIO_DIN23_3_ULPCLK_minimum_sample 0x00008000
+#define GPIO_DIN23_8_ULPCLK_minimum_sample 0x0000C000
+//DIN24
+#define GPIO_DIN24_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN24_1_ULPCLK_minimum_sample 0x00010000
+#define GPIO_DIN24_3_ULPCLK_minimum_sample 0x00020000
+#define GPIO_DIN24_8_ULPCLK_minimum_sample 0x00030000
+//DIN25
+#define GPIO_DIN25_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN25_1_ULPCLK_minimum_sample 0x00040000
+#define GPIO_DIN25_3_ULPCLK_minimum_sample 0x00080000
+#define GPIO_DIN25_8_ULPCLK_minimum_sample 0x000C0000
+//DIN26
+#define GPIO_DIN26_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN26_1_ULPCLK_minimum_sample 0x00100000
+#define GPIO_DIN26_3_ULPCLK_minimum_sample 0x00200000
+#define GPIO_DIN26_8_ULPCLK_minimum_sample 0x00300000
+//DIN27
+#define GPIO_DIN27_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN27_1_ULPCLK_minimum_sample 0x00400000
+#define GPIO_DIN27_3_ULPCLK_minimum_sample 0x00800000
+#define GPIO_DIN27_8_ULPCLK_minimum_sample 0x00C00000
+//DIN28
+#define GPIO_DIN28_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN28_1_ULPCLK_minimum_sample 0x01000000
+#define GPIO_DIN28_3_ULPCLK_minimum_sample 0x02000000
+#define GPIO_DIN28_8_ULPCLK_minimum_sample 0x03000000
+//DIN29
+#define GPIO_DIN29_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN29_1_ULPCLK_minimum_sample 0x04000000
+#define GPIO_DIN29_3_ULPCLK_minimum_sample 0x08000000
+#define GPIO_DIN29_8_ULPCLK_minimum_sample 0x0C000000
+//DIN30
+#define GPIO_DIN30_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN30_1_ULPCLK_minimum_sample 0x10000000
+#define GPIO_DIN30_3_ULPCLK_minimum_sample 0x20000000
+#define GPIO_DIN30_8_ULPCLK_minimum_sample 0x30000000
+//DIN31
+#define GPIO_DIN31_No_additional_filter_beyond_sample 0x00000000
+#define GPIO_DIN31_1_ULPCLK_minimum_sample 0x40000000
+#define GPIO_DIN31_3_ULPCLK_minimum_sample 0x80000000
+#define GPIO_DIN31_8_ULPCLK_minimum_sample 0xC0000000
+
+//DMA Mask Register
+#define GPIO_DMA_Mask_Register_Base 0x400A0000
+#define GPIO_DMA_Mask_Register_Offset 0x00001510
+#define GPIO_DMA_Mask_Register (*((volatile uint32_t)(GPIO_DMA_Mask_Register_Base+GPIO_DMA_Mask_Register_Offset)))
+//控制宏
+//DMA is allowed to modify DOUTx
+#define GPIO_DMA_allowe_to_modify_DOUT0_Enable 0x00000001
+#define GPIO_DMA_allowe_to_modify_DOUT1_Enable 0x00000002
+#define GPIO_DMA_allowe_to_modify_DOUT2_Enable 0x00000004
+#define GPIO_DMA_allowe_to_modify_DOUT3_Enable 0x00000008
+#define GPIO_DMA_allowe_to_modify_DOUT4_Enable 0x00000010
+#define GPIO_DMA_allowe_to_modify_DOUT5_Enable 0x00000020
+#define GPIO_DMA_allowe_to_modify_DOUT6_Enable 0x00000040
+#define GPIO_DMA_allowe_to_modify_DOUT7_Enable 0x00000080
+#define GPIO_DMA_allowe_to_modify_DOUT8_Enable 0x00000100
+#define GPIO_DMA_allowe_to_modify_DOUT9_Enable 0x00000200
+#define GPIO_DMA_allowe_to_modify_DOUT10_Enable 0x00000400
+#define GPIO_DMA_allowe_to_modify_DOUT11_Enable 0x00000800
+#define GPIO_DMA_allowe_to_modify_DOUT12_Enable 0x00001000
+#define GPIO_DMA_allowe_to_modify_DOUT13_Enable 0x00002000
+#define GPIO_DMA_allowe_to_modify_DOUT14_Enable 0x00004000
+#define GPIO_DMA_allowe_to_modify_DOUT15_Enable 0x00008000
+#define GPIO_DMA_allowe_to_modify_DOUT16_Enable 0x00010000
+#define GPIO_DMA_allowe_to_modify_DOUT17_Enable 0x00020000
+#define GPIO_DMA_allowe_to_modify_DOUT18_Enable 0x00040000
+#define GPIO_DMA_allowe_to_modify_DOUT19_Enable 0x00080000
+#define GPIO_DMA_allowe_to_modify_DOUT20_Enable 0x00100000
+#define GPIO_DMA_allowe_to_modify_DOUT21_Enable 0x00200000
+#define GPIO_DMA_allowe_to_modify_DOUT22_Enable 0x00400000
+#define GPIO_DMA_allowe_to_modify_DOUT23_Enable 0x00800000
+#define GPIO_DMA_allowe_to_modify_DOUT24_Enable 0x01000000
+#define GPIO_DMA_allowe_to_modify_DOUT25_Enable 0x02000000
+#define GPIO_DMA_allowe_to_modify_DOUT26_Enable 0x04000000
+#define GPIO_DMA_allowe_to_modify_DOUT27_Enable 0x08000000
+#define GPIO_DMA_allowe_to_modify_DOUT28_Enable 0x10000000
+#define GPIO_DMA_allowe_to_modify_DOUT29_Enable 0x20000000
+#define GPIO_DMA_allowe_to_modify_DOUT30_Enable 0x40000000
+#define GPIO_DMA_allowe_to_modify_DOUT31_Enable 0x80000000
+
+//Subscriber 1 Configuration Register
+#define GPIO_Subscriber_1_Configuration_Register_Base 0x400A0000
+#define GPIO_Subscriber_1_Configuration_Register_Offset 0x00001520
+#define GPIO_Subscriber_1_Configuration_Register (*((volatile uint32_t)(GPIO_Subscriber_1_Configuration_Register_Base+GPIO_Subscriber_1_Configuration_Register_Offset)))
+//控制宏
+//Subscriber 1 event is enabled
+#define GPIO_Subscriber_1_event_is_enable 0x00000001
+//These bits configure the output policy for subscriber 1 event
+#define GPIO_subscriber_1_event_Selected_DIO_pins_are_set 0x00000000
+#define GPIO_subscriber_1_event_Selected_DIO_pins_are_cleared 0x00000100
+#define GPIO_subscriber_1_event_Selected_DIO_pins_are_toggled 0x00000200
+//indicates the specific bit in the upper 16 bits that is targeted by the subscriber action bit19-bit16
+
+#endif
