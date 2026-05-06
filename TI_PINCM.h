@@ -5,6 +5,9 @@
 //标准字长文件引入
 #include"stdint.h"
 //Pin Control Management Register
+#define Pin_Control_Management_Register_PinCMx_Base 0x40428000
+#define Pin_Control_Management_Register_PinCMx_Offset 0x00000004
+#define Pin_Control_Management_Register_PinCMx ((Typedef_Pin_Control_Management_Register_PinCMx*)(Pin_Control_Management_Register_PinCMx_Base+Pin_Control_Management_Register_PinCMx_Offset))
 //寄存器结构体声明
 typedef struct
 {
@@ -68,7 +71,7 @@ typedef struct
     volatile uint32_t Pin_Control_Management_Register_PinCM58_PB27;
     volatile uint32_t Pin_Control_Management_Register_PinCM59_PA26;
     volatile uint32_t Pin_Control_Management_Register_PinCM60_PA27;
-};
+}Typedef_Pin_Control_Management_Register_PinCMx;
 //控制宏
 //Peripheral Function selection bits
 #define Pin_Control_Management_Register_PinCMx_An_encoding_per_function 0x0000003F
