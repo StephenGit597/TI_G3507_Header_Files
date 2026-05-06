@@ -1,0 +1,419 @@
+//Designer:Stephen
+//For TI_MSPM0G3507
+#ifndef TI_ADC_h
+#define TI_ADC_h
+//标准字长头文件引用
+#include"stdint.h"
+/*--------------ADC0-------------*/
+//Power enable
+#define ADC0_Power_enable_Register_Base 0x40000000
+#define ADC0_Power_enable_Register_Offset 0x00000800
+#define ADC0_Power_enable_Register (*((volatile uint32_t)(ADC0_Power_enable_Register_Base+ADC0_Power_enable_Register_Offset)))
+//Reset Control
+#define ADC0_Reset_Control_Register_Base 0x40000000
+#define ADC0_Reset_Control_Register_Offset 0x00000804
+#define ADC0_Reset_Control_Register (*((volatile uint32_t)(ADC0_Reset_Control_Register_Base+ADC0_Reset_Control_Register_Offset)))
+// ADC clock configuration Register
+#define ADC0_clock_configuration_Register_Base 0x40000000
+#define ADC0_clock_configuration_Register_Offset 0x00000808
+#define ADC0_clock_configuration_Register (*((volatile uint32_t)(ADC0_clock_configuration_Register_Base+ADC0_clock_configuration_Register_Offset)))
+//peripheral enable and reset status
+#define ADC0_peripheral_enable_and_reset_status_Register 0x40000000
+#define ADC0_peripheral_enable_and_reset_status_Register_Offset 0x00000814
+#define ADC0_peripheral_enable_and_reset_status_Register (*((volatile uint32_t)(ADC0_peripheral_enable_and_reset_status_Register_Base+ADC0_peripheral_enable_and_reset_status_Register_Offset)))
+//Event Mode
+#define ADC0_Event_Mode_Register_Base 0x40000000
+#define ADC0_Event_Mode_Register_Offset 0x000010E0
+#define ADC0_Event_Mode_Register (*((volatile uint32_t)(ADC0_Event_Mode_Register_Base+ADC0_Event_Mode_Register_Offset)))
+// Module Description
+#define ADC0_Module_Description_Register_Base 0x40000000
+#define ADC0_Module_Description_Register_Offset 0x000010FC
+#define ADC0_Module_Description_Register (*((volatile uint32_t)(ADC0_Module_Description_Register_Base+ADC0_Module_Description_Register_Offset)))
+// Control Register 0
+#define ADC0_Control_Register_0_Base 0x40000000
+#define ADC0_Control_Register_0_Offset 0x00001100
+#define ADC0_Control_Register_0 (*((volatile uint32_t)(ADC0_Control_Register_0_Base+ADC0_Control_Register_0_Offset)))
+// Control Register 1
+#define ADC0_Control_Register_1_Base 0x40000000
+#define ADC0_Control_Register_1_Offset 0x00001104
+#define ADC0_Control_Register_1 (*((volatile uint32_t)(ADC0_Control_Register_1_Base+ADC0_Control_Register_1_Offset)))
+// Control Register 2
+#define ADC0_Control_Register_2_Base 0x40000000
+#define ADC0_Control_Register_2_Offset 0x00001108
+#define ADC0_Control_Register_2 (*((volatile uint32_t)(ADC0_Control_Register_2_Base+ADC0_Control_Register_2_Offset)))
+// Sample Clock Frequency Range Register
+#define ADC0_Sample_Clock_Frequency_Range_Register_Base 0x40000000
+#define ADC0_Sample_Clock_Frequency_Range_Register_Offset 0x00001110
+#define ADC0_Sample_Clock_Frequency_Range_Register (*((volatile uint32_t)(ADC0_Sample_Clock_Frequency_Range_Register_Base+ADC0_Sample_Clock_Frequency_Range_Register_Offset)))
+//Sample Time Compare 0 Register
+#define ADC0_Sample_Time_Compare_0_Register_Base 0x40000000
+#define ADC0_Sample_Time_Compare_0_Register_Offset 0x00001114
+#define ADC0_Sample_Time_Compare_0_Register (*((volatile uint32_t)(ADC0_Sample_Time_Compare_0_Register_Base+ADC0_Sample_Time_Compare_0_Register_Offset)))
+//Sample Time Compare 1 Register
+#define ADC0_Sample_Time_Compare_1_Register_Base 0x40000000
+#define ADC0_Sample_Time_Compare_1_Register_Offset 0x00001118
+#define ADC0_Sample_Time_Compare_1_Register (*((volatile uint32_t)(ADC0_Sample_Time_Compare_1_Register_Base+ADC0_Sample_Time_Compare_1_Register_Offset)))
+// Window Comparator Low Threshold Register
+#define ADC0_Window_Comparator_Low_Threshold_Register_Base 0x40000000
+#define ADC0_Window_Comparator_Low_Threshold_Register_Offset 0x00001148
+#define ADC0_Window_Comparator_Low_Threshold_Register (*((volatile uint32_t)(ADC0_Window_Comparator_Low_Threshold_Register_Base+ADC0_Window_Comparator_Low_Threshold_Register_Offset)))
+// Window Comparator High Threshold Register
+#define ADC0_Window_Comparator_High_Threshold_Register_Base 0x40000000
+#define ADC0_Window_Comparator_High_Threshold_Register_Offset 0x00001150
+#define ADC0_Window_Comparator_High_Threshold_Register (*((volatile uint32_t)(ADC0_Window_Comparator_High_Threshold_Register_Base+ADC0_Window_Comparator_High_Threshold_Register_Offset)))
+// Conversion Memory Control Register
+typedef struct
+{
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_0;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_1;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_2;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_3;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_4;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_5;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_6;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_7;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_8;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_9;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_10;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_11;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_12;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_13;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_14;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_15;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_16;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_17;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_18;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_19;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_20;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_21;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_22;
+    volatile uint32_t ADC0_Conversion_Memory_Control_Register_23;
+}typedef_ADC0_Conversion_Memory_Control_Register_x;
+#define ADC0_Conversion_Memory_Control_Register_x_Base 
+#define ADC0_Conversion_Memory_Control_Register_x ((typedef_ADC0_Conversion_Memory_Control_Register_x*)(ADC0_Conversion_Memory_Control_Register_x_Base))
+// Status Register
+#define ADC0_Status_Register_Base 0x40000000
+#define ADC0_Status_Register_Offset 0x00001340
+#define ADC0_Status_Register (*((volatile uint32_t)(ADC0_Status_Register_Base+ADC0_Status_Register_Offset)))
+
+/*--------------ADC1-------------*/
+//Power enable
+#define ADC1_Power_enable_Register_Base 0x40002000
+#define ADC1_Power_enable_Register_Offset 0x00000800
+#define ADC1_Power_enable_Register (*((volatile uint32_t)(ADC1_Power_enable_Register_Base+ADC1_Power_enable_Register_Offset)))
+//Reset Control
+#define ADC1_Reset_Control_Register_Base 0x40002000
+#define ADC1_Reset_Control_Register_Offset 0x00000804
+#define ADC1_Reset_Control_Register (*((volatile uint32_t)(ADC1_Reset_Control_Register_Base+ADC1_Reset_Control_Register_Offset)))
+// ADC clock configuration Register
+#define ADC1_clock_configuration_Register_Base 0x40002000
+#define ADC1_clock_configuration_Register_Offset 0x00000808
+#define ADC1_clock_configuration_Register (*((volatile uint32_t)(ADC1_clock_configuration_Register_Base+ADC1_clock_configuration_Register_Offset)))
+//peripheral enable and reset status
+#define ADC1_peripheral_enable_and_reset_status_Register 0x40002000
+#define ADC1_peripheral_enable_and_reset_status_Register_Offset 0x00000814
+#define ADC1_peripheral_enable_and_reset_status_Register (*((volatile uint32_t)(ADC1_peripheral_enable_and_reset_status_Register_Base+ADC1_peripheral_enable_and_reset_status_Register_Offset)))
+//Event Mode
+#define ADC1_Event_Mode_Register_Base 0x40002000
+#define ADC1_Event_Mode_Register_Offset 0x000010E0
+#define ADC1_Event_Mode_Register (*((volatile uint32_t)(ADC1_Event_Mode_Register_Base+ADC1_Event_Mode_Register_Offset)))
+// Module Description
+#define ADC1_Module_Description_Register_Base 0x40002000
+#define ADC1_Module_Description_Register_Offset 0x000010FC
+#define ADC1_Module_Description_Register (*((volatile uint32_t)(ADC1_Module_Description_Register_Base+ADC1_Module_Description_Register_Offset)))
+// Control Register 0
+#define ADC1_Control_Register_0_Base 0x40002000
+#define ADC1_Control_Register_0_Offset 0x00001100
+#define ADC1_Control_Register_0 (*((volatile uint32_t)(ADC1_Control_Register_0_Base+ADC1_Control_Register_0_Offset)))
+// Control Register 1
+#define ADC1_Control_Register_1_Base 0x40002000
+#define ADC1_Control_Register_1_Offset 0x00001104
+#define ADC1_Control_Register_1 (*((volatile uint32_t)(ADC1_Control_Register_1_Base+ADC1_Control_Register_1_Offset)))
+// Control Register 2
+#define ADC1_Control_Register_2_Base 0x40002000
+#define ADC1_Control_Register_2_Offset 0x00001108
+#define ADC1_Control_Register_2 (*((volatile uint32_t)(ADC1_Control_Register_2_Base+ADC1_Control_Register_2_Offset)))
+// Sample Clock Frequency Range Register
+#define ADC1_Sample_Clock_Frequency_Range_Register_Base 0x40002000
+#define ADC1_Sample_Clock_Frequency_Range_Register_Offset 0x00001110
+#define ADC1_Sample_Clock_Frequency_Range_Register (*((volatile uint32_t)(ADC1_Sample_Clock_Frequency_Range_Register_Base+ADC1_Sample_Clock_Frequency_Range_Register_Offset)))
+//Sample Time Compare 0 Register
+#define ADC1_Sample_Time_Compare_0_Register_Base 0x40002000
+#define ADC1_Sample_Time_Compare_0_Register_Offset 0x00001114
+#define ADC1_Sample_Time_Compare_0_Register (*((volatile uint32_t)(ADC1_Sample_Time_Compare_0_Register_Base+ADC1_Sample_Time_Compare_0_Register_Offset)))
+//Sample Time Compare 1 Register
+#define ADC1_Sample_Time_Compare_1_Register_Base 0x40002000
+#define ADC1_Sample_Time_Compare_1_Register_Offset 0x00001118
+#define ADC1_Sample_Time_Compare_1_Register (*((volatile uint32_t)(ADC1_Sample_Time_Compare_1_Register_Base+ADC1_Sample_Time_Compare_1_Register_Offset)))
+// Window Comparator Low Threshold Register
+#define ADC1_Window_Comparator_Low_Threshold_Register_Base 0x40002000
+#define ADC1_Window_Comparator_Low_Threshold_Register_Offset 0x00001148
+#define ADC1_Window_Comparator_Low_Threshold_Register (*((volatile uint32_t)(ADC1_Window_Comparator_Low_Threshold_Register_Base+ADC1_Window_Comparator_Low_Threshold_Register_Offset)))
+// Window Comparator High Threshold Register
+#define ADC1_Window_Comparator_High_Threshold_Register_Base 0x40002000
+#define ADC1_Window_Comparator_High_Threshold_Register_Offset 0x00001150
+#define ADC1_Window_Comparator_High_Threshold_Register (*((volatile uint32_t)(ADC1_Window_Comparator_High_Threshold_Register_Base+ADC1_Window_Comparator_High_Threshold_Register_Offset)))
+// Conversion Memory Control Register
+typedef struct
+{
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_0;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_1;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_2;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_3;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_4;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_5;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_6;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_7;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_8;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_9;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_10;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_11;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_12;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_13;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_14;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_15;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_16;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_17;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_18;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_19;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_20;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_21;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_22;
+    volatile uint32_t ADC1_Conversion_Memory_Control_Register_23;
+}typedef_ADC1_Conversion_Memory_Control_Register_x;
+#define ADC1_Conversion_Memory_Control_Register_x_Base 0x40002000
+#define ADC1_Conversion_Memory_Control_Register_x ((typedef_ADC0_Conversion_Memory_Control_Register_x*)(ADC0_Conversion_Memory_Control_Register_x_Base))
+// Status Register
+#define ADC1_Status_Register_Base 0x40002000
+#define ADC1_Status_Register_Offset 0x00001340
+#define ADC1_Status_Register (*((volatile uint32_t)(ADC1_Status_Register_Base+ADC1_Status_Register_Offset)))
+
+//控制宏
+//ADCx_Power_enable_Register
+//Enable Power notice KEY must be set to 26h to write to this bit
+#define ADCx_Power_enable_Register_Enable_Power 0x00000001
+// KEY to allow Power State Change 26h = KEY to allow write access to this register
+#define ADCx_Power_enable_Register_KEY_to_allow_Power_State_Change 0x26000000
+
+//ADCx_Reset_Control_Register
+// Assert reset to the peripheral notice:KEY must be set to B1h to write to this bit.
+#define ADCx_Reset_Control_Register_Assert reset 0x00000001
+//Clear the RESETSTKY bit in the STAT register notice:KEY must be set to B1h to write to this bit.
+#define ADCx_Reset_Control_Register_Clear_reset_sticky_bit 0x00000002
+// Unlock key B1h = KEY to allow write access to this register
+#define ADCx_Reset_Control_Register_Unlock_key 0xB1000000 
+
+//ADC clock configuration Register
+// ADC sample clock source selection
+#define ADCx_clock_configuration_Register_ULPCLK_is_the_source_of_ADC_sample_clock 0x00000000
+#define ADCx_clock_configuration_Register_SYSOSC_is_the_source_of_ADC_sample_clock 0x00000001
+#define ADCx_clock_configuration_Register_HFCLK_clock_is_the_source_of_ADC_sample_clock 0x00000002
+// CCONRUN: Forces SYSOSC to run at base frequency when device is in RUN mode which can be used as ADC sample or conversion clock source
+#define ADCx_clock_configuration_Register_ADC_conversion_clock_source_kept_continuously_on_run 0x00000010
+// CCONSTOP: Forces SYSOSC to run at base frequency when device is in STOP mode which can be used as ADC sample or conversion clock source.
+#define ADCx_clock_configuration_Register_ADC_conversion_clock_source_kept_continuously_on_stop 0x00000020
+// Unlock key A9h = KEY to allow write access to this register
+#define ADCx_clock_configuration_Register_Unlock_key 0xA9000000 
+
+//ADCx_peripheral_enable_and_reset_status_Register
+//This bit indicates, if the peripheral was reset, since this bit was cleared by RESETSTKYCLR in the RSTCTL register
+#define ADC0_peripheral_enable_and_reset_status_Register_The_peripheral_was_reset 0x00010000
+
+//ADCx_Event_Mode_Register
+// Event line mode select for event corresponding to CPU_INT
+#define ADCx_Event_Mode_Register_CPU_INT_software_mode 0x00000001
+#define ADCx_Event_Mode_Register_CPU_INT_hardware_mode 0x00000002
+// Event line mode select for event corresponding to GEN_EVENT
+#define ADCx_Event_Mode_Register_GEN_EVENT_software_mode 0x00000004
+#define ADCx_Event_Mode_Register_GEN_EVENT_hardware_mode 0x00000008
+
+//ADCx_Module_Description_Register
+// Minor rev of the IP bit3-bit0
+// Major rev of the IP bit7-bit4
+// Instance Number within the device bit11-bit8
+// Feature Set for the module *instance* bit15-bit12
+// Module identification contains a unique peripheral identification number
+
+//ADCx_Control_Register_0
+// Enable conversion
+#define ADCx_Control_Register_0_Conversion_enabled 0x00000001
+// Power down policy
+#define ADCx_Control_Register_0_Conversion_ADC_remains_powered_on 0x00010000
+//Sample clock divider
+#define ADCx_Control_Register_0_Divide_clock_source_by_2
+#define ADCx_Control_Register_0_Divide_clock_source_by_4
+#define ADCx_Control_Register_0_Divide_clock_source_by_8
+#define ADCx_Control_Register_0_Divide_clock_source_by_16
+#define ADCx_Control_Register_0_Divide_clock_source_by_24
+#define ADCx_Control_Register_0_Divide_clock_source_by_32
+#define ADCx_Control_Register_0_Divide_clock_source_by_48
+
+//ADCx_Control_Register_1
+//Sample trigger source
+#define ADCx_Control_Register_1_Hardware_event_trigger 0x000000001
+//Start of conversion
+#define ADCx_Control_Register_1_start_the_sample 0x00000100
+// Conversion sequence mode
+#define ADCx_Control_Register_1_pointed_by_STARTADD_will_beconverted_once 0x00010000
+#define ADCx_Control_Register_1_pointed_by_STARTADD_and_ENDADDwill_be_converted_once 0x00020000
+#define ADCx_Control_Register_1_pointed_by_STARTADD_and_ENDADDwill_be_converted_repeatedly 0x00030000
+//Sample mode
+#define ADCx_Control_Register_1_Software_trigger_used_as_sample_signal 0x00100000
+// Hardware averager numerator
+#define ADCx_Control_Register_1_Averages_2_conversions_before_storing 0x01000000
+#define ADCx_Control_Register_1_Averages_4_conversions_before_storing 0x02000000
+#define ADCx_Control_Register_1_Averages_8_conversions_before_storing 0x03000000
+#define ADCx_Control_Register_1_Averages_16_conversions_before_storing 0x04000000
+#define ADCx_Control_Register_1_Averages_32_conversions_before_storing 0x05000000
+#define ADCx_Control_Register_1_Averages_64_conversions_before_storing 0x06000000
+#define ADCx_Control_Register_1_Averages_128_conversions_before_storing 0x07000000
+//Hardware averager denominator
+#define ADCx_Control_Register_1_1_bit_shift 0x10000000
+#define ADCx_Control_Register_1_2_bit_shift 0x20000000
+#define ADCx_Control_Register_1_3_bit_shift 0x30000000
+#define ADCx_Control_Register_1_4_bit_shift 0x40000000
+#define ADCx_Control_Register_1_5_bit_shift 0x50000000
+#define ADCx_Control_Register_1_6_bit_shift 0x60000000
+#define ADCx_Control_Register_1_7_bit_shift 0x70000000
+
+//ADCx_Control_Register_2
+// Data read-back format. Data is always stored in binary unsigned format
+#define ADCx_Control_Register_2_Digital_result_reads_Signed_Binary 0x00000001
+//Resolution. These bits define the resolution of ADC conversion result
+#define ADCx_Control_Register_2_10_bits_resolution 0x00000002
+#define ADCx_Control_Register_2_8_bits_resolution 0x00000004
+//This incurs one additional conversion clock cycle
+#define ADCx_Control_Register_2_Enable_sample_capacitor_discharge_feature 0x00000010
+//Enable DMA trigger for data transfer
+#define ADCx_Control_Register_2_DMA_trigger_enabled 0x00000100
+//Enable FIFO based operation
+#define ADCx_Control_Register_2_Enable_FIFO 0x00000400
+//Number of ADC converted samples to be transferred on a DMA trigger bit15-bit11
+//Sequencer start address
+#define ADCx_Control_Register_2_MEMCTL0_selected_as_start_address_for_a_single_conversion 0x00000000
+#define ADCx_Control_Register_2_MEMCTL1_selected_as_start_address_for_a_single_conversion 0x00010000
+#define ADCx_Control_Register_2_MEMCTL2_selected_as_start_address_for_a_single_conversion 0x00020000
+#define ADCx_Control_Register_2_MEMCTL3_selected_as_start_address_for_a_single_conversion 0x00030000
+#define ADCx_Control_Register_2_MEMCTL4_selected_as_start_address_for_a_single_conversion 0x00040000
+#define ADCx_Control_Register_2_MEMCTL5_selected_as_start_address_for_a_single_conversion 0x00050000
+#define ADCx_Control_Register_2_MEMCTL6_selected_as_start_address_for_a_single_conversion 0x00060000
+#define ADCx_Control_Register_2_MEMCTL7_selected_as_start_address_for_a_single_conversion 0x00070000
+#define ADCx_Control_Register_2_MEMCTL8_selected_as_start_address_for_a_single_conversion 0x00080000
+#define ADCx_Control_Register_2_MEMCTL9_selected_as_start_address_for_a_single_conversion 0x00090000
+#define ADCx_Control_Register_2_MEMCTL10_selected_as_start_address_for_a_single_conversion 0x000A0000
+#define ADCx_Control_Register_2_MEMCTL11_selected_as_start_address_for_a_single_conversion 0x000B0000
+#define ADCx_Control_Register_2_MEMCTL12_selected_as_start_address_for_a_single_conversion 0x000C0000
+#define ADCx_Control_Register_2_MEMCTL13_selected_as_start_address_for_a_single_conversion 0x000D0000
+#define ADCx_Control_Register_2_MEMCTL14_selected_as_start_address_for_a_single_conversion 0x000E0000
+#define ADCx_Control_Register_2_MEMCTL15_selected_as_start_address_for_a_single_conversion 0x000F0000
+#define ADCx_Control_Register_2_MEMCTL16_selected_as_start_address_for_a_single_conversion 0x00100000
+#define ADCx_Control_Register_2_MEMCTL17_selected_as_start_address_for_a_single_conversion 0x00110000
+#define ADCx_Control_Register_2_MEMCTL18_selected_as_start_address_for_a_single_conversion 0x00120000
+#define ADCx_Control_Register_2_MEMCTL19_selected_as_start_address_for_a_single_conversion 0x00130000
+#define ADCx_Control_Register_2_MEMCTL20_selected_as_start_address_for_a_single_conversion 0x00140000
+#define ADCx_Control_Register_2_MEMCTL21_selected_as_start_address_for_a_single_conversion 0x00150000
+#define ADCx_Control_Register_2_MEMCTL22_selected_as_start_address_for_a_single_conversion 0x00160000
+#define ADCx_Control_Register_2_MEMCTL23_selected_as_start_address_for_a_single_conversion 0x00170000
+//Sequence end address
+#define ADCx_Control_Register_2_MEMCTL0_selected_as_end_address_of_sequence 0x00000000
+#define ADCx_Control_Register_2_MEMCTL1_selected_as_end_address_of_sequence 0x01000000
+#define ADCx_Control_Register_2_MEMCTL2_selected_as_end_address_of_sequence 0x02000000
+#define ADCx_Control_Register_2_MEMCTL3_selected_as_end_address_of_sequence 0x03000000
+#define ADCx_Control_Register_2_MEMCTL4_selected_as_end_address_of_sequence 0x04000000
+#define ADCx_Control_Register_2_MEMCTL5_selected_as_end_address_of_sequence 0x05000000
+#define ADCx_Control_Register_2_MEMCTL6_selected_as_end_address_of_sequence 0x06000000
+#define ADCx_Control_Register_2_MEMCTL7_selected_as_end_address_of_sequence 0x07000000
+#define ADCx_Control_Register_2_MEMCTL8_selected_as_end_address_of_sequence 0x08000000
+#define ADCx_Control_Register_2_MEMCTL9_selected_as_end_address_of_sequence 0x09000000
+#define ADCx_Control_Register_2_MEMCTL10_selected_as_end_address_of_sequence 0x0A000000
+#define ADCx_Control_Register_2_MEMCTL11_selected_as_end_address_of_sequence 0x0B000000
+#define ADCx_Control_Register_2_MEMCTL12_selected_as_end_address_of_sequence 0x0C000000
+#define ADCx_Control_Register_2_MEMCTL13_selected_as_end_address_of_sequence 0x0D000000
+#define ADCx_Control_Register_2_MEMCTL14_selected_as_end_address_of_sequence 0x0E000000
+#define ADCx_Control_Register_2_MEMCTL15_selected_as_end_address_of_sequence 0x0F000000
+#define ADCx_Control_Register_2_MEMCTL16_selected_as_end_address_of_sequence 0x10000000
+#define ADCx_Control_Register_2_MEMCTL17_selected_as_end_address_of_sequence 0x11000000
+#define ADCx_Control_Register_2_MEMCTL18_selected_as_end_address_of_sequence 0x12000000
+#define ADCx_Control_Register_2_MEMCTL19_selected_as_end_address_of_sequence 0x13000000
+#define ADCx_Control_Register_2_MEMCTL20_selected_as_end_address_of_sequence 0x14000000
+#define ADCx_Control_Register_2_MEMCTL21_selected_as_end_address_of_sequence 0x15000000
+#define ADCx_Control_Register_2_MEMCTL22_selected_as_end_address_of_sequence 0x16000000
+#define ADCx_Control_Register_2_MEMCTL23_selected_as_end_address_of_sequence 0x17000000
+
+//ADCx_Sample_Clock_Frequency_Range_Register
+//Frequency Range
+#define ADCx_Sample_Clock_Frequency_Range_Register_1_to_4_MHz 0x00000000
+#define ADCx_Sample_Clock_Frequency_Range_Register_4_to_8_MHz 0x00000001
+#define ADCx_Sample_Clock_Frequency_Range_Register_8_to_16_MHz 0x00000002
+#define ADCx_Sample_Clock_Frequency_Range_Register_16_to_20_MHz 0x00000003
+#define ADCx_Sample_Clock_Frequency_Range_Register_20_to_24_MHz 0x00000004
+#define ADCx_Sample_Clock_Frequency_Range_Register_24_to_32_MHz 0x00000005
+#define ADCx_Sample_Clock_Frequency_Range_Register_32_to_40_MHz 0x00000006
+#define ADCx_Sample_Clock_Frequency_Range_Register_40_to_48_MHz 0x00000007
+
+//ADCx_Sample_Time_Compare_0_Register
+//Specifies the number of sample clocks bit9-bit0
+
+//ADCx_Sample_Time_Compare_1_Register
+//Specifies the number of sample clocks
+
+//ADCx_Window_Comparator_Low_Threshold_Register
+//Window Comparator Low Threshold Register
+
+//ADC1_Window_Comparator_High_Threshold_Register
+//Window Comparator High Threshold Register
+
+//ADCx_Conversion_Memory_Control_Register_x
+// Input channel select
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_0 0x00000000
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_1 0x00000001
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_2 0x00000002
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_3 0x00000003
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_4 0x00000004
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_5 0x00000005
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_6 0x00000006
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_7 0x00000007
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_8 0x00000008
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_9 0x00000009
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_10 0x0000000A
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_11 0x0000000B
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_12 0x0000000C
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_13 0x0000000D
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_14 0x0000000E
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_15 0x0000000F
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_16 0x00000010
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_17 0x00000011
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_18 0x00000012
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_19 0x00000013
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_20 0x00000014
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_21 0x00000015
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_22 0x00000016
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_23 0x00000017
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_24 0x00000018
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_25 0x00000019
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_26 0x000000A0
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_27 0x0000001B
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_28 0x0000001C
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_29 0x0000001D
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_30 0x0000001E
+#define ADCx_Conversion_Memory_Control_Register_x_Selects_channel_31 0x0000001F
+//Voltage reference selection
+#define ADCx_Conversion_Memory_Control_Register_x_Positive_reference_VD_reference_Negative_reference_VSS 0x00000000
+#define ADCx_Conversion_Memory_Control_Register_x_Positive_reference_VREF_pin_Negative_reference_VREF_pin 0x00000100
+#define ADCx_Conversion_Memory_Control_Register_x_Positive_reference_Internal_reference_Negative_reference_VSS 0x00000200
+#define ADCx_Conversion_Memory_Control_Register_x_Positive_reference_VDD_reference_Negative_reference_VREF_pin 0x00000300
+#define ADCx_Conversion_Memory_Control_Register_x_Positive_reference_Internal_reference_Negative_reference_VREF_pin 0x00000400
+// Selects the source of sample timer period between SCOMP0 and SCOMP1
+#define ADCx_Conversion_Memory_Control_Register_x_Select_SCOMP0 0x00000000
+#define ADCx_Conversion_Memory_Control_Register_x_Select_SCOMP1 0x00001000
+// Enable hardware averaging
+#define ADCx_Conversion_Memory_Control_Register_x_Averaging_enabled 0x00010000
+// Enable burn out current source
+#define ADCx_Conversion_Memory_Control_Register_x_Enable_burn_out_current_source 0x00100000
+//Trigger policy
+#define ADCx_Conversion_Memory_Control_Register_x_Next_conversion_is_automatic 0x00000000
+#define ADCx_Conversion_Memory_Control_Register_x_Next_conversion_requires_a_trigger 0x01000000
+//Enable window comparator
+#define ADCx_Conversion_Memory_Control_Register_x_Enable_window_comparator 0x10000000
+
+#endif
