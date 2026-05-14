@@ -768,14 +768,29 @@
 #define UARTx_Interrupt_FIFO_Level_Select_Register_Receive_Interrupt_Timeout_Select_F 0x00000F00
 
 //UARTx_Integer_Baud_Rate_Divisor_Register
+//Integer Baud-Rate Divisor bit15-bit0
 
 //UARTx_Fractional_Baud_Rate_Divisor_Register
+//Fractional Baud-Rate Diviso bit5-bit0
 
 //UARTx_Glitch_Filter_Control_Register
+//Glitch Suppression Pulse Width 
+//bit5-bit0
+//Analog Glitch Suppression Enable
+#define UARTx_Glitch_Filter_Control_Register_Analog_Glitch_Filter_enable 0x00000100
+//Analog Glitch Suppression Pulse Width
+#define UARTx_Glitch_Filter_Control_Register_Pulses_shorter_then_5ns_length_are_filtered 0x00000000
+#define UARTx_Glitch_Filter_Control_Register_Pulses_shorter_then_10ns_length_are_filtered 0x00000200
+#define UARTx_Glitch_Filter_Control_Register_Pulses_shorter_then_25ns_length_are_filtered 0x00000400
+#define UARTx_Glitch_Filter_Control_Register_Pulses_shorter_then_50ns_length_are_filtered 0x00000600
+//Analog and digital noise filters chaining enable
+#define UARTx_Glitch_Filter_Control_Register_Analog_and_digital_noise_filters_chaining_enable 0x00000800
 
 //UARTx_Transmit_Data_Register
+//Data Transmitted or Received Data that is to be transmitted via the UART is written to this field
 
 //UARTx_Receive_Data_Register
+//Received Data bit7-bit0
 
 //UARTx_LIN_Mode_Counter_Register
 
