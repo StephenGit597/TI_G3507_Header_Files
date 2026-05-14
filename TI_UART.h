@@ -793,6 +793,7 @@
 //Received Data bit7-bit0
 
 //UARTx_LIN_Mode_Counter_Register
+//16 bit up counter clocked by the functional clock of the UART
 
 //UARTx_LIN_Mode_Control_Register
 
