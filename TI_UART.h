@@ -721,6 +721,18 @@
 #define UARTx_Line_Control_Register_UARTclk_ticks_after_the_beginning_of_the_stop_bit_31 0x011E0000
 
 //UARTx_Status_Register
+//UART Busy
+#define UARTx_Status_Register_UART_is_busy_transmitting_data 0x00000001
+//UART Receive FIFO Empty The meaning of this bit depends on the state of the FEN bit in the CTL0 register
+#define UARTx_Status_Register_holding_register_or_receive_FIFO_is_empty 0x00000004
+//UART Receive FIFO Full The meaning of this bit depends on the state of the FEN bit in the CTL0 register
+#define UARTx_Status_Register_transmit_holding_register_or_transmit_FIFO_is_empty 0x00000040
+//UART Transmit FIFO Full The meaning of this bit depends on the state of the FEN bit in the CTL0 register
+#define UARTx_Status_Register_transmit_holding_register_or_transmit_FIFO_is_full 0x00000080
+//Clear To Send
+#define UARTx_Status_Register_The_CTS_signal_is_asserted 0x00000100
+//IDLE mode has been detected in Idleline-Multiprocessor-Mode
+#define UARTx_Status_Register_IDLE_has_been_detected 0x00000200
 
 //UARTx_Interrupt_FIFO_Level_Select_Register
 
