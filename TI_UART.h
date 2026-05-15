@@ -791,30 +791,65 @@
 
 //UARTx_Receive_Data_Register
 //Received Data bit7-bit0
+//UART Framing Error Writing to this bit has no effect
+#define UARTx_Receive_Data_Register_received_character_does_not_have_a_valid_stop_bit_sequence 0x00000100
+//UART Parity Error Writing to this bit has no effect
+#define UARTx_Receive_Data_Register_The_parity_of_the_received_data_character_does_not_match_the_parity 0x00000200
+//UART Break Error Writing to this bit has no effect
+#define UARTx_Receive_Data_Register_A_break_condition_has_been_detected 0x00000400
+//UART Receive Overrun Error Writing to this bit has no effect
+#define UARTx_Receive_Data_Register_New_data_was_received_but_could_not_be_stored 0x00000800
+//Noise Error
+#define UARTx_Receive_Data_Register_Noise_error_occurred_during_majority_voting 0x00001000
 
 //UARTx_LIN_Mode_Counter_Register
 //16 bit up counter clocked by the functional clock of the UART
 
 //UARTx_LIN_Mode_Control_Register
+//LIN Counter Enable. LIN counter will only count when enabled
+#define UARTx_LIN_Mode_Control_Register_Counter_enabled 0x00000001
+//Zero on negative Edge of RXD
+#define UARTx_LIN_Mode_Control_Register_Zero_on_negative_edge_enabled 0x00000002
+//Count while low Signal on RXD When counter is enabled and the signal on RXD is low
+#define UARTx_LIN_Mode_Control_Register_Count_while_low_Signal_on_UARTxRXD_enabled 0x00000004
+//Capture Counter on negative RXD Edge
+#define UARTx_LIN_Mode_Control_Register_Capture_counter_on_negative_UARTxRXD_edge_enabled 0x00000010
+//Capture Counter on positive RXD Edge
+#define UARTx_LIN_Mode_Control_Register_Capture_counter_on_positive_UARTxRXD_edge_enabled 0x00000020
+//Counter Compare Match Mode When this bit is set to 1 a counter compare match with LINC0 register triggers an LINC0 interrupt when enabled
+#define UARTx_LIN_Mode_Control_Register_Counter_compare_match_enabled 0x00000040
 
 //UARTx_LIN_Mode_Capture_0_Register
+//16 Bit Capture / Compare Register
+//Captures current LINCTR value on RXD falling edge and can generate a LINC0 interrupt when capture is enabled
 
 //UARTx_LIN_Mode_Capture_1_Register
+//16 Bit Capture / Compare Register
+//Captures current LINCTR value on RXD rising edge and can generate a LINC1 interrupt when capture is enabled
 
 //UARTx_eUSCI_Ax_IrDA_Control_Word_Register
+//IrDA encoder/decoder enable
+#define UARTx_eUSCI_Ax_IrDA_Control_Word_Register_IrDA_encoder_decoder_enabled 0x00000001
+//IrDA transmit pulse clock select
+#define UARTx_eUSCI_Ax_IrDA_Control_Word_Register_IrDA_encode_data_is_based_on_the_Baud_Rate_clock 0x00000002
+//Transmit pulse length
+#define UARTx_eUSCI_Ax_IrDA_Control_Word_Register_IrDA_transceiver_delivers_a_low_pulse_when_a_light_pulse_is_seen 0x00000200
 
 //UARTx_Self_Address_Mask_Register
+//Self Address Mask for 9-Bit Mode This field contains the address mask that creates a set of addresses that should be matched
 
 //UARTx_Self_Address_Register
+//Self Address for 9-Bit Mode This field contains the address that should be matched when UARTxAMASK is FFh
 
 //UARTx_Clock_Divider_Register
-
-
-
-
-
-
-
-
+//Selects divide ratio of module clock
+#define UARTx_Clock_Divider_Register_Do_not_divide_clock_source 0x00000000
+#define UARTx_Clock_Divider_Register_Divide clock source by 2 0x00000001
+#define UARTx_Clock_Divider_Register_Divide clock source by 3 0x00000002
+#define UARTx_Clock_Divider_Register_Divide clock source by 4 0x00000003
+#define UARTx_Clock_Divider_Register_Divide clock source by 5 0x00000004
+#define UARTx_Clock_Divider_Register_Divide clock source by 6 0x00000005
+#define UARTx_Clock_Divider_Register_Divide clock source by 7 0x00000006
+#define UARTx_Clock_Divider_Register_Divide clock source by 8 0x00000007
 
 #endif
