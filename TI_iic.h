@@ -643,4 +643,24 @@
 //I2Cx_Target_TXData_Register
 //Transmit Data
 
+//I2Cx_Target_ACK_Control_Register
+//I2C Target ACK Override Enable
+#define I2Cx_Target_ACK_Control_Register_I2C_Target_ACK_Override_Enable 0x00000001
+//I2C Target ACK Override Value
+#define I2Cx_Target_ACK_Control_Register_A_NACK_is_sent_indicating_invalid_data_or_command 0x00000002
+//When set this bit will automatically turn on the Target ACKOEN field following a Start Condition
+#define I2Cx_Target_ACK_Control_Register_automatically_turn_on_the_Target_ACKOEN_field_following_a_Start_Condition 0x00000004
+//When set this bit will automatically turn on the Target ACKOEN field
+#define I2Cx_Target_ACK_Control_Register_automatically_turn_on_the_Target_ACKOEN_field_following_the_ACK_or_NACK_received_just_prior_to_the_PEC_byte 0x00000008
+//When set this bit will automatically turn on the Target ACKOEN field
+#define I2Cx_Target_ACK_Control_Register_automatically_turn_on_the_Target_ACKOEN_field_following_the_ACK_or_NACK_of_the_received_PEC_byte 0x00000010
+
+//I2Cx_Target_FIFO_Control_Register
+
+//I2C1_Target_FIFO_Status_Register
+
+//I2C1_Target_PEC_control_register
+
+//I2C1_Target_PEC_status_register
+
 #endif
