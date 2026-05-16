@@ -656,11 +656,39 @@
 #define I2Cx_Target_ACK_Control_Register_automatically_turn_on_the_Target_ACKOEN_field_following_the_ACK_or_NACK_of_the_received_PEC_byte 0x00000010
 
 //I2Cx_Target_FIFO_Control_Register
+//TX FIFO Trigger Indicates at what fill level in the TX FIFO a trigger will be generated
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_TX_FIFO_contains_less_than_4_byte 0x00000004
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_TX_FIFO_contains_less_than_5_byte 0x00000005
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_TX_FIFO_contains_less_than_6_byte 0x00000006
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_TX_FIFO_contains_less_than_7_byte 0x00000007
+//TX FIFO Flush Setting this bit will Flush the TX FIFO.
+#define I2Cx_Target_FIFO_Control_Register_TX_FIFO_Flush_Flush_FIFO 0x00000080
+//RX FIFO Trigger Indicates at what fill level in the RX FIFO a trigger will be generated
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_RX_FIFO_contains_large_than_5_byte 0x00000400
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_RX_FIFO_contains_large_than_6_byte 0x00000500
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_RX_FIFO_contains_large_than_7_byte 0x00000600
+#define I2Cx_Target_FIFO_Control_Register_Trigger_when_RX_FIFO_contains_large_than_8_byte 0x00000700
+//RX FIFO Flush Setting this bit will Flush the RX FIFO.
+#define I2Cx_Target_FIFO_Control_Register_RX_FIFO_Flush_Flush_FIFO 0x00008000
 
-//I2C1_Target_FIFO_Status_Register
+//I2Cx_Target_FIFO_Status_Register
+//Number of Bytes which could be read from the RX FIFO bit3-bit0
+//RX FIFO Flush
+#define I2Cx_Target_FIFO_Status_Register_RX_FIFO_Flush_FIFO_Flush_active 0x00000080
+//Number of Bytes which could be put into the TX FIFO bit11-bit8
+//TX FIFO Flush
+#define I2Cx_Target_FIFO_Status_Register_TX_FIFO_Flush_FIFO_Flush_active 0x00008000
 
-//I2C1_Target_PEC_control_register
+//I2Cx_Target_PEC_control_register
+// When this field is non zero, the number of I2C data bytes are counted bit8-bit0
+//PEC Enable
+#define I2Cx_Target_PEC_control_register_PEC_transmission_and_check_is_enabled 0x00001000
 
-//I2C1_Target_PEC_status_register
+//I2Cx_Target_PEC_status_register
+//This is the current PEC Byte Count of the Target State Machine bit8-bit0
+//This status bit indicates if the PEC was checked in the transaction that occurred before the last Stop. Latched on Stop
+#define I2Cx_Target_PEC_status_register_PEC_was_checked_in_the_transaction 0x00010000
+//This status bit indicates if a PEC check error occurred in the transaction
+#define I2Cx_Target_PEC_status_register_PEC_check_error_occurred_in_the_transaction 0x00020000
 
 #endif
